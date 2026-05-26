@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harivar Steel Centre LTD</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy:   #1a2e6e;
+            --cobalt: #2945a0;
+            --cobalt-light: #4a6fd8;
+            --silver: #c8d4e8;
+            --dark:   #0d1833;
+            --off-white: #f4f6fb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            background: var(--off-white);
+        }
+
+        .container {
+            width: 1024px;
+            margin: auto;
+            box-shadow: 0 0 60px rgba(0,0,0,0.18);
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--navy) 55%, var(--cobalt) 100%);
+            height: 138px;
+            width: 1024px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 3px solid var(--cobalt-light);
+        }
+
+        /* subtle diagonal stripe texture */
+        header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                -50deg,
+                transparent,
+                transparent 28px,
+                rgba(255,255,255,0.03) 28px,
+                rgba(255,255,255,0.03) 56px
+            );
+            pointer-events: none;
+        }
+
+        header h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            position: relative;
+            z-index: 1;
+        }
+
+        header p {
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 0.12em;
+            color: var(--silver);
+            margin-top: 8px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── NAV ── */
+        nav {
+            background-color: var(--dark);
+            height: 50px;
+            width: 1024px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            border-bottom: 2px solid var(--cobalt);
+        }
+
+        nav a {
+            color: var(--silver);
+            text-decoration: none;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.12em;
+            padding: 7px 18px;
+            border-radius: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        nav a:hover {
+            background: var(--cobalt);
+            color: white;
+        }
+
+        /* ── MAIN (hero) ── */
+        main {
+            background: linear-gradient(160deg, var(--navy) 0%, var(--cobalt) 100%);
+            height: 200px;
+            width: 1024px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        main::after {
+            content: '';
+            position: absolute;
+            right: -60px;
+            top: -60px;
+            width: 340px;
+            height: 340px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(74,111,216,0.25) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        main h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            position: relative;
+            z-index: 1;
+        }
+
+        main p {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--silver);
+            margin-top: 8px;
+            letter-spacing: 0.05em;
+            position: relative;
+            z-index: 1;
+        }
+
+        main div {
+            margin-top: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── BUTTONS ── */
+        button {
+            margin: 5px;
+            padding: 10px 22px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            border-radius: 3px;
+            transition: all 0.22s;
+        }
+
+        main div button:first-child {
+            background: white;
+            color: var(--navy);
+        }
+
+        main div button:first-child:hover {
+            background: var(--silver);
+            transform: translateY(-2px);
+        }
+
+        main div button:last-child {
+            background: var(--cobalt-light);
+            color: white;
+        }
+
+        main div button:last-child:hover {
+            background: var(--cobalt);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(42,69,163,0.45);
+        }
+
+        /* ── GENERAL SECTIONS ── */
+        section, article, aside, .contact {
+            width: 1024px;
+            padding: 40px 48px;
+            text-align: center;
+        }
+
+        /* ── SERVICES ── */
+        section {
+            background: white;
+        }
+
+        section h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--navy);
+            letter-spacing: 0.04em;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--cobalt-light);
+            display: inline-block;
+        }
+
+        section p {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.8;
+            padding: 8px 0;
+            border-bottom: 1px solid #e8edf5;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        section p:last-child {
+            border-bottom: none;
+        }
+
+        /* ── ABOUT ── */
+        article {
+            background: var(--off-white);
+            border-top: 4px solid var(--cobalt);
+            border-bottom: 4px solid var(--cobalt);
+        }
+
+        article h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--navy);
+            letter-spacing: 0.04em;
+            margin-bottom: 16px;
+        }
+
+        article p {
+            font-size: 15px;
+            color: #4a5568;
+            line-height: 1.8;
+            max-width: 640px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* ── GALLERY ── */
+        aside {
+            background: var(--dark);
+            padding: 40px 48px;
+        }
+
+        aside h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            color: white;
+            letter-spacing: 0.04em;
+            margin-bottom: 28px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--cobalt-light);
+            display: inline-block;
+        }
+
+        aside img {
+            width: 272px;
+            height: 185px;
+            object-fit: cover;
+            margin: 8px;
+            border-radius: 4px;
+            border: 2px solid rgba(74,111,216,0.4);
+            transition: transform 0.3s, border-color 0.3s;
+            vertical-align: top;
+        }
+
+        aside img:hover {
+            transform: scale(1.04);
+            border-color: var(--cobalt-light);
+        }
+
+        /* ── CONTACT ── */
+        .contact {
+            background: var(--navy);
+            color: white;
+            padding: 44px 48px;
+        }
+
+        .contact h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--cobalt-light);
+            display: inline-block;
+        }
+
+        .contact p {
+            font-size: 14px;
+            color: var(--silver);
+            line-height: 2;
+            letter-spacing: 0.04em;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background-color: var(--dark);
+            height: 48px;
+            width: 1024px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--silver);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            border-top: 2px solid var(--cobalt);
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <h1>HARIVAR STEEL CENTRE LTD</h1>
+        <p>We Don't Just Transport Cement, We Transport Trust In Cement</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#">SERVICES</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">GALLERY</a>
+        <a href="#">CONTACT</a>
+        <a href="#">LINKS</a>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <h2>The Strength Behind Building Kenya</h2>
+        <p>Reliable cement and steel transportation services across Kenya.</p>
+
+        <div>
+            <button>VISIT PARTNER</button>
+            <button>CONTACT US</button>
+        </div>
+    </main>
+
+    <!-- SERVICES -->
+    <section>
+        <h2>Our Services</h2>
+        <p>Cement Transport - Safe and timely delivery across Kenya</p>
+        <p>Steel Delivery - Reliable construction material transport</p>
+        <p>Bulk Logistics - Large scale industrial transport solutions</p>
+    </section>
+
+    <!-- ABOUT -->
+    <article>
+        <h2>About Us</h2>
+        <p>
+            Harivar Steel Centre LTD is a trusted logistics company
+            specializing in cement and steel transportation across Kenya.
+        </p>
+    </article>
+
+    <!-- GALLERY -->
+    <aside>
+        <h2>Gallery</h2>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Mitsubishi_Fuso_Canter_%28FE7%29%2C_SG.jpg/320px-Mitsubishi_Fuso_Canter_%28FE7%29%2C_SG.jpg" width="200">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Scania_R_580_V8_-_cement_bags.jpg/320px-Scania_R_580_V8_-_cement_bags.jpg" width="200">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Isuzu_NPR_truck.jpg/320px-Isuzu_NPR_truck.jpg" width="200">
+    </aside>
+
+    <!-- CONTACT -->
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p>Location: Garissa Road, Thika | Nairobi, Kenya</p>
+        <p>Phone: +254750400060 / +254706400060</p>
+        <p>Email: harivarsteelcentre@gmail.com</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Harivar Steel Centre LTD. All Rights Reserved.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
