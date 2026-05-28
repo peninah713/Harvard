@@ -1,417 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harivar Steel Centre LTD</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harivar Steel Centre LTD</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#1a8fc1;--sky-dark:#0f6a94;--sky-deep:#0a4d6e;
+  --sky-light:#e6f4fb;--sky-mid:#b3ddf2;
+  --white:#ffffff;--off:#f5fafd;--text:#0d2535;--muted:#4a6578;
+  --border:#cce5f5;--dark:#061520;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Montserrat',sans-serif;background:#f0f7fc;color:var(--text);}
+.page{width:1024px;margin:0 auto;background:var(--white);box-shadow:0 8px 80px rgba(10,77,110,0.18);}
 
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+.topbar{background:var(--sky-deep);height:38px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;}
+.topbar-left,.topbar-right{display:flex;gap:24px;}
+.tb-item{font-size:11px;font-weight:500;letter-spacing:0.07em;color:rgba(255,255,255,0.65);display:flex;align-items:center;gap:7px;}
+.tb-item svg{width:13px;height:13px;stroke:var(--sky-mid);fill:none;stroke-width:2;flex-shrink:0;}
+.tb-divider{width:1px;height:18px;background:rgba(255,255,255,0.12);margin:0 4px;}
+.social-links{display:flex;align-items:center;gap:6px;}
+.social-link{width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:2px;background:rgba(255,255,255,0.07);transition:background 0.18s;text-decoration:none;}
+.social-link:hover{background:rgba(255,255,255,0.18);}
+.social-link svg{width:14px;height:14px;fill:rgba(255,255,255,0.6);}
 
-    <style>
-        :root {
-            --navy:   #1a2e6e;
-            --cobalt: #2945a0;
-            --cobalt-light: #4a6fd8;
-            --silver: #c8d4e8;
-            --dark:   #0d1833;
-            --off-white: #f4f6fb;
-        }
+header{background:var(--white);height:88px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;border-bottom:3px solid var(--sky);box-shadow:0 2px 16px rgba(26,143,193,0.1);}
+.logo{display:flex;align-items:center;gap:16px;}
+.logo-icon{width:52px;height:52px;background:var(--sky);display:flex;align-items:center;justify-content:center;clip-path:polygon(0 0,90% 0,100% 10%,100% 100%,10% 100%,0 90%);flex-shrink:0;}
+.logo-icon svg{width:26px;height:26px;fill:white;}
+.logo-name{font-family:'Montserrat',sans-serif;font-size:19px;font-weight:800;color:var(--sky-deep);letter-spacing:0.03em;line-height:1.15;}
+.logo-name span{display:block;font-size:10.5px;font-weight:500;color:var(--sky);letter-spacing:0.2em;margin-top:3px;}
+.header-right{display:flex;align-items:center;gap:32px;}
+.header-info{text-align:right;}
+.header-info p{font-size:12px;color:var(--muted);line-height:1.9;}
+.header-info strong{color:var(--sky-deep);font-weight:700;}
+.header-btn{background:var(--sky);color:white;border:none;padding:11px 24px;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:0.12em;cursor:pointer;clip-path:polygon(0 0,93% 0,100% 15%,100% 100%,7% 100%,0 85%);transition:background 0.2s;}
+.header-btn:hover{background:var(--sky-dark);}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+nav{background:var(--sky-deep);height:50px;display:flex;align-items:center;padding:0 48px;gap:0;}
+nav a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:11.5px;font-weight:600;letter-spacing:0.14em;padding:0 20px;height:50px;display:flex;align-items:center;border-right:1px solid rgba(255,255,255,0.08);transition:background 0.18s,color 0.18s;position:relative;}
+nav a:first-child{border-left:1px solid rgba(255,255,255,0.08);}
+nav a:hover,nav a.active{background:var(--sky);color:white;}
+nav a.active::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--sky-mid);}
+.nav-spacer{flex:1;}
+.nav-cta{background:white;color:var(--sky-deep);border:none;padding:0 24px;height:50px;display:flex;align-items:center;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:0.13em;cursor:pointer;transition:background 0.18s;text-decoration:none;}
+.nav-cta:hover{background:var(--sky-light);color:var(--sky-deep)!important;}
 
-        body {
-            font-family: 'Barlow', sans-serif;
-            background: var(--off-white);
-        }
+.hero{position:relative;height:420px;overflow:hidden;display:flex;align-items:flex-end;}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=80');background-size:cover;background-position:center 40%;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(6,21,32,0.85) 0%,rgba(10,77,110,0.72) 50%,rgba(26,143,193,0.35) 100%);}
+.hero-content{position:relative;z-index:2;width:100%;padding:0 48px 52px;display:flex;align-items:flex-end;justify-content:space-between;}
+.hero-left{max-width:560px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(26,143,193,0.25);border:1px solid rgba(178,221,242,0.35);padding:6px 14px;margin-bottom:18px;}
+.hero-badge span{font-size:10.5px;font-weight:600;letter-spacing:0.2em;color:var(--sky-mid);}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--sky-mid);animation:blink 2s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero h2{font-family:'Lora',serif;font-size:44px;font-weight:600;color:white;line-height:1.2;margin-bottom:14px;}
+.hero h2 em{font-style:normal;color:var(--sky-mid);}
+.hero-sub{font-size:14px;font-weight:400;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:28px;max-width:440px;}
+.hero-btns{display:flex;gap:12px;}
+.btn-primary{background:var(--sky);color:white;border:none;padding:13px 28px;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:0.13em;cursor:pointer;transition:background 0.2s,transform 0.15s;}
+.btn-primary:hover{background:var(--sky-dark);transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:white;border:1.5px solid rgba(255,255,255,0.4);padding:13px 28px;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.13em;cursor:pointer;transition:border-color 0.2s,color 0.2s,transform 0.15s;}
+.btn-ghost:hover{border-color:var(--sky-mid);color:var(--sky-mid);transform:translateY(-2px);}
+.hero-stats{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,0.15);background:rgba(6,21,32,0.6);backdrop-filter:blur(8px);min-width:185px;}
+.hero-stat{padding:20px 24px;border-bottom:1px solid rgba(255,255,255,0.1);}
+.hero-stat:last-child{border-bottom:none;}
+.stat-n{font-family:'Lora',serif;font-size:36px;font-weight:600;color:var(--sky-mid);line-height:1;margin-bottom:4px;}
+.stat-l{font-size:10px;font-weight:600;letter-spacing:0.18em;color:rgba(255,255,255,0.45);}
 
-        .container {
-            width: 1024px;
-            margin: auto;
-            box-shadow: 0 0 60px rgba(0,0,0,0.18);
-        }
+.services-strip{background:var(--sky);display:grid;grid-template-columns:repeat(3,1fr);}
+.strip-item{padding:28px 32px;border-right:1px solid rgba(255,255,255,0.18);display:flex;align-items:flex-start;gap:16px;transition:background 0.2s;}
+.strip-item:last-child{border-right:none;}
+.strip-item:hover{background:var(--sky-dark);}
+.strip-icon{width:40px;height:40px;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.strip-icon svg{width:20px;height:20px;stroke:white;fill:none;stroke-width:1.8;}
+.strip-item h3{font-size:12.5px;font-weight:700;color:white;letter-spacing:0.06em;margin-bottom:5px;}
+.strip-item p{font-size:11.5px;color:rgba(255,255,255,0.7);line-height:1.7;font-weight:400;}
 
-        /* ── HEADER ── */
-        header {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--navy) 55%, var(--cobalt) 100%);
-            height: 138px;
-            width: 1024px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-            border-bottom: 3px solid var(--cobalt-light);
-        }
+.about{background:var(--off);padding:80px 48px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.about-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.24em;color:var(--sky);margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.about-eyebrow::before{content:'';width:28px;height:2px;background:var(--sky);}
+.about h2{font-family:'Lora',serif;font-size:32px;font-weight:600;color:var(--text);line-height:1.25;margin-bottom:16px;}
+.about-body{font-size:14px;color:var(--muted);line-height:1.9;font-weight:400;margin-bottom:24px;}
+.about-points{display:grid;gap:0;border:1.5px solid var(--border);}
+.about-pt{padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:14px;}
+.about-pt:last-child{border-bottom:none;}
+.about-pt-icon{width:34px;height:34px;background:var(--sky-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.about-pt-icon svg{width:16px;height:16px;stroke:var(--sky);fill:none;stroke-width:2;}
+.about-pt h4{font-size:12px;font-weight:700;color:var(--text);margin-bottom:3px;letter-spacing:0.06em;}
+.about-pt p{font-size:12px;color:var(--muted);line-height:1.6;}
+.about-img-block{position:relative;padding-bottom:20px;padding-right:20px;}
+.about-img-wrap{width:100%;height:340px;overflow:hidden;border:3px solid var(--sky);position:relative;}
+.about-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
+.about-img-badge{position:absolute;bottom:0;right:0;background:var(--sky);color:white;padding:18px 22px;text-align:center;box-shadow:0 8px 32px rgba(10,77,110,0.35);}
+.about-img-badge .big{font-family:'Lora',serif;font-size:34px;font-weight:600;line-height:1;}
+.about-img-badge .sm{font-size:10px;font-weight:600;letter-spacing:0.18em;opacity:0.85;margin-top:4px;}
 
-        /* subtle diagonal stripe texture */
-        header::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: repeating-linear-gradient(
-                -50deg,
-                transparent,
-                transparent 28px,
-                rgba(255,255,255,0.03) 28px,
-                rgba(255,255,255,0.03) 56px
-            );
-            pointer-events: none;
-        }
+.services{background:var(--white);padding:80px 48px;}
+.section-header{margin-bottom:48px;}
+.section-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.24em;color:var(--sky);margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.section-eyebrow::before{content:'';width:28px;height:2px;background:var(--sky);}
+.section-header h2{font-family:'Lora',serif;font-size:34px;font-weight:600;color:var(--text);line-height:1.2;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.svc-card{border:1.5px solid var(--border);padding:36px 28px;transition:border-color 0.25s,box-shadow 0.25s,transform 0.2s;background:var(--white);}
+.svc-card:hover{border-color:var(--sky);box-shadow:0 8px 40px rgba(26,143,193,0.12);transform:translateY(-4px);}
+.svc-num{font-family:'Lora',serif;font-size:13px;font-weight:600;color:var(--sky-mid);letter-spacing:0.08em;margin-bottom:16px;}
+.svc-icon{width:52px;height:52px;background:var(--sky-light);display:flex;align-items:center;justify-content:center;margin-bottom:20px;border-bottom:3px solid var(--sky);}
+.svc-icon svg{width:24px;height:24px;stroke:var(--sky);fill:none;stroke-width:1.6;}
+.svc-card h3{font-size:16px;font-weight:700;color:var(--text);margin-bottom:12px;line-height:1.3;}
+.svc-card p{font-size:13px;color:var(--muted);line-height:1.8;font-weight:400;}
+.svc-more{margin-top:20px;font-size:11px;font-weight:700;letter-spacing:0.14em;color:var(--sky);display:flex;align-items:center;gap:6px;cursor:pointer;}
+.svc-more::after{content:'→';transition:transform 0.2s;}
+.svc-card:hover .svc-more::after{transform:translateX(5px);}
 
-        header h1 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 34px;
-            font-weight: 800;
-            letter-spacing: 0.06em;
-            position: relative;
-            z-index: 1;
-        }
+.gallery{background:var(--sky-deep);padding:80px 48px;}
+.gallery .section-eyebrow{color:var(--sky-mid);}
+.gallery .section-eyebrow::before{background:var(--sky-mid);}
+.gallery .section-header h2{color:white;}
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:12px;margin-top:40px;}
+.gal-item{overflow:hidden;position:relative;cursor:pointer;background:rgba(255,255,255,0.06);}
+.gal-item:first-child{grid-column:1/3;grid-row:1/3;height:380px;}
+.gal-item:not(:first-child){height:184px;}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s ease;}
+.gal-item:hover img{transform:scale(1.07);}
+.gal-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,21,32,0.75) 0%,transparent 55%);opacity:0;transition:opacity 0.3s;display:flex;align-items:flex-end;padding:18px;}
+.gal-item:hover .gal-overlay{opacity:1;}
+.gal-overlay span{font-size:11px;font-weight:700;letter-spacing:0.16em;color:var(--sky-mid);}
+.gal-placeholder{width:100%;height:100%;background:rgba(26,143,193,0.1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border:1px dashed rgba(178,221,242,0.2);}
+.gal-placeholder svg{width:32px;height:32px;stroke:rgba(178,221,242,0.3);fill:none;stroke-width:1.5;}
+.gal-placeholder span{font-size:10px;letter-spacing:0.18em;color:rgba(178,221,242,0.3);font-weight:600;}
 
-        header p {
-            font-size: 13px;
-            font-weight: 300;
-            letter-spacing: 0.12em;
-            color: var(--silver);
-            margin-top: 8px;
-            font-style: italic;
-            position: relative;
-            z-index: 1;
-        }
+.contact{background:var(--white);padding:80px 48px;display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+.contact h2{font-family:'Lora',serif;font-size:34px;font-weight:600;color:var(--text);margin-bottom:32px;line-height:1.2;}
+.contact-items{display:grid;gap:0;border:1.5px solid var(--border);}
+.c-item{padding:22px 24px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:16px;}
+.c-item:last-child{border-bottom:none;}
+.c-icon{width:40px;height:40px;background:var(--sky-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;border-left:3px solid var(--sky);}
+.c-icon svg{width:18px;height:18px;stroke:var(--sky);fill:none;stroke-width:1.8;}
+.c-label{font-size:10px;font-weight:700;letter-spacing:0.18em;color:var(--sky);margin-bottom:5px;}
+.c-val{font-size:13.5px;color:var(--text);line-height:1.7;font-weight:500;}
+.map-wrap{border:1.5px solid var(--border);overflow:hidden;display:flex;flex-direction:column;}
+.map-wrap iframe{width:100%;height:300px;border:none;display:block;filter:saturate(0.8);}
+.map-footer{background:var(--sky);padding:14px 20px;display:flex;align-items:center;gap:10px;}
+.map-footer svg{width:14px;height:14px;stroke:rgba(255,255,255,0.7);fill:none;stroke-width:2;flex-shrink:0;}
+.map-footer span{font-size:11px;font-weight:600;letter-spacing:0.13em;color:rgba(255,255,255,0.85);}
 
-        /* ── NAV ── */
-        nav {
-            background-color: var(--dark);
-            height: 50px;
-            width: 1024px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 4px;
-            border-bottom: 2px solid var(--cobalt);
-        }
+.cta-banner{background:var(--sky);padding:56px 48px;display:flex;align-items:center;justify-content:space-between;position:relative;overflow:hidden;}
+.cta-banner::before{content:'';position:absolute;right:-60px;top:-60px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,0.07);pointer-events:none;}
+.cta-banner::after{content:'';position:absolute;right:80px;bottom:-80px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.05);pointer-events:none;}
+.cta-text h3{font-family:'Lora',serif;font-size:28px;font-weight:600;color:white;margin-bottom:8px;line-height:1.3;}
+.cta-text p{font-size:14px;color:rgba(255,255,255,0.72);font-weight:400;}
+.cta-actions{display:flex;gap:12px;flex-shrink:0;position:relative;z-index:1;}
+.cta-btn-w{background:white;color:var(--sky-deep);border:none;padding:13px 28px;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:0.13em;cursor:pointer;transition:background 0.2s,transform 0.15s;}
+.cta-btn-w:hover{background:var(--sky-light);transform:translateY(-2px);}
+.cta-btn-o{background:transparent;color:white;border:1.5px solid rgba(255,255,255,0.5);padding:13px 28px;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.13em;cursor:pointer;transition:border-color 0.2s,transform 0.15s;}
+.cta-btn-o:hover{border-color:white;transform:translateY(-2px);}
 
-        nav a {
-            color: var(--silver);
-            text-decoration: none;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 600;
-            font-size: 13px;
-            letter-spacing: 0.12em;
-            padding: 7px 18px;
-            border-radius: 2px;
-            transition: background 0.2s, color 0.2s;
-        }
-
-        nav a:hover {
-            background: var(--cobalt);
-            color: white;
-        }
-
-        /* ── MAIN (hero) ── */
-        main {
-            background: linear-gradient(160deg, var(--navy) 0%, var(--cobalt) 100%);
-            height: 200px;
-            width: 1024px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        main::after {
-            content: '';
-            position: absolute;
-            right: -60px;
-            top: -60px;
-            width: 340px;
-            height: 340px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(74,111,216,0.25) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        main h2 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 32px;
-            font-weight: 800;
-            letter-spacing: 0.04em;
-            position: relative;
-            z-index: 1;
-        }
-
-        main p {
-            font-size: 14px;
-            font-weight: 300;
-            color: var(--silver);
-            margin-top: 8px;
-            letter-spacing: 0.05em;
-            position: relative;
-            z-index: 1;
-        }
-
-        main div {
-            margin-top: 18px;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* ── BUTTONS ── */
-        button {
-            margin: 5px;
-            padding: 10px 22px;
-            border: none;
-            cursor: pointer;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            border-radius: 3px;
-            transition: all 0.22s;
-        }
-
-        main div button:first-child {
-            background: white;
-            color: var(--navy);
-        }
-
-        main div button:first-child:hover {
-            background: var(--silver);
-            transform: translateY(-2px);
-        }
-
-        main div button:last-child {
-            background: var(--cobalt-light);
-            color: white;
-        }
-
-        main div button:last-child:hover {
-            background: var(--cobalt);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(42,69,163,0.45);
-        }
-
-        /* ── GENERAL SECTIONS ── */
-        section, article, aside, .contact {
-            width: 1024px;
-            padding: 40px 48px;
-            text-align: center;
-        }
-
-        /* ── SERVICES ── */
-        section {
-            background: white;
-        }
-
-        section h2 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 26px;
-            font-weight: 800;
-            color: var(--navy);
-            letter-spacing: 0.04em;
-            margin-bottom: 24px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid var(--cobalt-light);
-            display: inline-block;
-        }
-
-        section p {
-            font-size: 14px;
-            color: #4a5568;
-            line-height: 1.8;
-            padding: 8px 0;
-            border-bottom: 1px solid #e8edf5;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        section p:last-child {
-            border-bottom: none;
-        }
-
-        /* ── ABOUT ── */
-        article {
-            background: var(--off-white);
-            border-top: 4px solid var(--cobalt);
-            border-bottom: 4px solid var(--cobalt);
-        }
-
-        article h2 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 26px;
-            font-weight: 800;
-            color: var(--navy);
-            letter-spacing: 0.04em;
-            margin-bottom: 16px;
-        }
-
-        article p {
-            font-size: 15px;
-            color: #4a5568;
-            line-height: 1.8;
-            max-width: 640px;
-            margin: 0 auto;
-            font-weight: 300;
-        }
-
-        /* ── GALLERY ── */
-        aside {
-            background: var(--dark);
-            padding: 40px 48px;
-        }
-
-        aside h2 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 26px;
-            font-weight: 800;
-            color: white;
-            letter-spacing: 0.04em;
-            margin-bottom: 28px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid var(--cobalt-light);
-            display: inline-block;
-        }
-
-        aside img {
-            width: 272px;
-            height: 185px;
-            object-fit: cover;
-            margin: 8px;
-            border-radius: 4px;
-            border: 2px solid rgba(74,111,216,0.4);
-            transition: transform 0.3s, border-color 0.3s;
-            vertical-align: top;
-        }
-
-        aside img:hover {
-            transform: scale(1.04);
-            border-color: var(--cobalt-light);
-        }
-
-        /* ── CONTACT ── */
-        .contact {
-            background: var(--navy);
-            color: white;
-            padding: 44px 48px;
-        }
-
-        .contact h2 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 26px;
-            font-weight: 800;
-            letter-spacing: 0.04em;
-            margin-bottom: 24px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid var(--cobalt-light);
-            display: inline-block;
-        }
-
-        .contact p {
-            font-size: 14px;
-            color: var(--silver);
-            line-height: 2;
-            letter-spacing: 0.04em;
-        }
-
-        /* ── FOOTER ── */
-        footer {
-            background-color: var(--dark);
-            height: 48px;
-            width: 1024px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--silver);
-            font-size: 12px;
-            letter-spacing: 0.08em;
-            border-top: 2px solid var(--cobalt);
-        }
-
-    </style>
+footer{background:var(--sky-deep);padding:48px 48px 0;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.1);}
+.footer-desc{font-size:12.5px;color:rgba(255,255,255,0.5);line-height:1.9;margin-top:14px;font-weight:400;max-width:280px;}
+.footer-col h4{font-size:11px;font-weight:700;letter-spacing:0.2em;color:var(--sky-mid);margin-bottom:18px;}
+.footer-col a{display:block;font-size:12.5px;color:rgba(255,255,255,0.55);text-decoration:none;line-height:2.2;font-weight:400;transition:color 0.18s;}
+.footer-col a:hover{color:white;}
+.footer-bottom{height:50px;display:flex;align-items:center;justify-content:space-between;}
+.footer-bottom p{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.08em;}
+.footer-bottom p strong{color:rgba(255,255,255,0.5);font-weight:500;}
+</style>
 </head>
-
 <body>
+<div class="page">
 
-<div class="container">
-
-    <!-- HEADER -->
-    <header>
-        <h1>HARIVAR STEEL CENTRE LTD</h1>
-        <p>We Don't Just Transport Cement, We Transport Trust In Cement</p>
-    </header>
-
-    <!-- NAVIGATION -->
-    <nav>
-        <a href="#">HOME</a>
-        <a href="#">SERVICES</a>
-        <a href="#">ABOUT US</a>
-        <a href="#">GALLERY</a>
-        <a href="#">CONTACT</a>
-        <a href="#">LINKS</a>
-    </nav>
-
-    <!-- MAIN -->
-    <main>
-        <h2>The Strength Behind Building Kenya</h2>
-        <p>Reliable cement and steel transportation services across Kenya.</p>
-
-        <div>
-            <button>VISIT PARTNER</button>
-            <button>CONTACT US</button>
-        </div>
-    </main>
-
-    <!-- SERVICES -->
-    <section>
-        <h2>Our Services</h2>
-        <p>Cement Transport - Safe and timely delivery across Kenya</p>
-        <p>Steel Delivery - Reliable construction material transport</p>
-        <p>Bulk Logistics - Large scale industrial transport solutions</p>
-    </section>
-
-    <!-- ABOUT -->
-    <article>
-        <h2>About Us</h2>
-        <p>
-            Harivar Steel Centre LTD is a trusted logistics company
-            specializing in cement and steel transportation across Kenya.
-        </p>
-    </article>
-
-    <!-- GALLERY -->
-    <aside>
-        <h2>Gallery</h2>
-
-        <img src="2.jpeg" width="200">
-        <img src="3.jpeg" width="200">
-        <img src="4.jpeg" width="200">
-        
-    </aside>
-
-    <!-- CONTACT -->
-    <div class="contact">
-        <h2>Contact Us</h2>
-        <p>Location: Garissa Road, Thika | Nairobi, Kenya</p>
-        <p>Phone: +254750400060 / +254706400060</p>
-        <p>Email: harivarsteelcentre@gmail.com</p>
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="tb-item">
+      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Garissa Road, Thika · Nairobi, Kenya
     </div>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Harivar Steel Centre LTD. All Rights Reserved.</p>
-    </footer>
-
+  </div>
+  <div class="topbar-right">
+    <div class="tb-item">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      +254 750 400 060
+    </div>
+    <div class="tb-item">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      harivarsteelcentre@gmail.com
+    </div>
+    <div class="tb-divider"></div>
+    <div class="social-links">
+      <a href="https://wa.me/254750400060" class="social-link" target="_blank" title="WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.285 7.04L.785 23.5l4.59-1.478A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.368l-.36-.214-3.716 1.197 1.188-3.618-.235-.372A9.818 9.818 0 1112 21.818z"/></svg>
+      </a>
+      <a href="https://facebook.com/harivarsteelcentre" class="social-link" target="_blank" title="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://instagram.com/harivarsteelcentre" class="social-link" target="_blank" title="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+    </div>
+  </div>
 </div>
 
+<header>
+  <div class="logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 28 28"><rect x="2" y="11" width="24" height="6" rx="1"/><rect x="2" y="4" width="9" height="5" rx="0.5"/><rect x="2" y="19" width="9" height="5" rx="0.5"/><rect x="17" y="4" width="9" height="5" rx="0.5"/><rect x="17" y="19" width="9" height="5" rx="0.5"/></svg>
+    </div>
+    <div class="logo-name">HARIVAR STEEL CENTRE LTD<span>THIKA · NAIROBI, KENYA</span></div>
+  </div>
+  <div class="header-right">
+    <div class="header-info">
+      <p>Mon – Sat &nbsp;<strong>08:00 – 18:00</strong></p>
+      <p>Call &nbsp;<strong>+254 706 400 060</strong></p>
+    </div>
+    <button class="header-btn">GET A QUOTE</button>
+  </div>
+</header>
+
+<nav>
+  <a href="#" class="active">HOME</a>
+  <a href="#">SERVICES</a>
+  <a href="#">ABOUT US</a>
+  <a href="#">GALLERY</a>
+  <a href="#">CONTACT</a>
+  <a href="#">LINKS</a>
+  <div class="nav-spacer"></div>
+  <a href="#" class="nav-cta">REQUEST TRANSPORT</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge"><span>KENYA'S TRUSTED TRANSPORT PARTNER</span></div>
+      <h2>Moving <em>Steel &amp; Cement</em><br>Across Kenya</h2>
+      <p class="hero-sub">Reliable, on-time delivery of cement and steel to construction sites nationwide. Built on trust, driven by commitment.</p>
+      <div class="hero-btns">
+        <button class="btn-primary">OUR SERVICES</button>
+        <button class="btn-ghost">CONTACT US</button>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="stat-n">10+</div><div class="stat-l">YEARS IN SERVICE</div></div>
+      <div class="hero-stat"><div class="stat-n">47+</div><div class="stat-l">COUNTIES SERVED</div></div>
+      <div class="hero-stat"><div class="stat-n">100%</div><div class="stat-l">INSURED CARGO</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="services-strip">
+  <div class="strip-item">
+    <div class="strip-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M8 7V5h8v2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/><path d="M2 14h20"/></svg></div>
+    <div><h3>CEMENT TRANSPORT</h3><p>Safe delivery of bagged &amp; bulk cement across Kenya</p></div>
+  </div>
+  <div class="strip-item">
+    <div class="strip-icon"><svg viewBox="0 0 24 24"><path d="M4 8h16M4 12h16M4 16h10"/><rect x="2" y="4" width="20" height="16" rx="1"/></svg></div>
+    <div><h3>STEEL DELIVERY</h3><p>Structural steel, rebar &amp; roofing material haulage</p></div>
+  </div>
+  <div class="strip-item">
+    <div class="strip-icon"><svg viewBox="0 0 24 24"><path d="M3 6l9-4 9 4v6c0 5-9 9-9 9S3 17 3 12V6z"/></svg></div>
+    <div><h3>BULK LOGISTICS</h3><p>Large-scale industrial haulage &amp; fleet management</p></div>
+  </div>
+</div>
+
+<div class="about">
+  <div>
+    <div class="about-eyebrow">ABOUT US</div>
+    <h2>We Don't Just Transport Cement — We Transport Trust</h2>
+    <p class="about-body">Harivar Steel Centre LTD is a leading logistics company based in Thika, specializing in the safe and timely transport of cement and steel construction materials across Kenya.</p>
+    <div class="about-points">
+      <div class="about-pt">
+        <div class="about-pt-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><h4>NATIONWIDE COVERAGE</h4><p>Delivering across all 47 counties — from Mombasa to Kisumu.</p></div>
+      </div>
+      <div class="about-pt">
+        <div class="about-pt-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><h4>CERTIFIED &amp; INSURED</h4><p>Road-certified fleet with full cargo insurance for complete peace of mind.</p></div>
+      </div>
+      <div class="about-pt">
+        <div class="about-pt-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div><h4>ON-TIME DELIVERY</h4><p>We understand construction timelines — zero-delay delivery is our promise.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="about-img-block">
+    <div class="about-img-wrap">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Steel logistics"
+           onerror="this.src='';this.style.background='var(--sky-light)'">
+    </div>
+    <div class="about-img-badge"><div class="big">10+</div><div class="sm">YEARS TRUSTED</div></div>
+  </div>
+</div>
+
+<div class="services">
+  <div class="section-header">
+    <div class="section-eyebrow">WHAT WE OFFER</div>
+    <h2>Construction Logistics<br>Built for Kenya</h2>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card">
+      <div class="svc-num">01</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M8 7V5h8v2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/><path d="M2 14h20"/></svg></div>
+      <h3>Cement Transport</h3>
+      <p>Weather-protected, safe delivery of bagged and bulk cement to construction sites on time, every time.</p>
+      <div class="svc-more">LEARN MORE</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">02</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M4 8h16M4 12h16M4 16h10"/><rect x="2" y="4" width="20" height="16" rx="1"/></svg></div>
+      <h3>Steel Delivery</h3>
+      <p>Specialized transport of structural steel, rebar, and roofing materials with secure load management.</p>
+      <div class="svc-more">LEARN MORE</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">03</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 6l9-4 9 4v6c0 5-9 9-9 9S3 17 3 12V6z"/></svg></div>
+      <h3>Bulk Logistics</h3>
+      <p>High-volume industrial haulage tailored for large projects — fleet-managed with real-time coordination.</p>
+      <div class="svc-more">LEARN MORE</div>
+    </div>
+  </div>
+</div>
+
+<div class="gallery">
+  <div class="section-header">
+    <div class="section-eyebrow">GALLERY</div>
+    <h2>Our Fleet &amp; Operations</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gal-item">
+      <img src="2.jpeg" alt="Fleet operations" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="gal-placeholder" style="display:none"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M8 7V5h8v2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg><span>FLEET PHOTO</span></div>
+      <div class="gal-overlay"><span>CEMENT TRANSPORT</span></div>
+    </div>
+    <div class="gal-item">
+      <img src="3.jpeg" alt="Steel delivery" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="gal-placeholder" style="display:none"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M8 7V5h8v2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg><span>FLEET PHOTO</span></div>
+      <div class="gal-overlay"><span>STEEL DELIVERY</span></div>
+    </div>
+    <div class="gal-item">
+      <img src="4.jpeg" alt="Bulk logistics" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="gal-placeholder" style="display:none"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M8 7V5h8v2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg><span>FLEET PHOTO</span></div>
+      <div class="gal-overlay"><span>BULK LOGISTICS</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="contact">
+  <div>
+    <div class="section-eyebrow">GET IN TOUCH</div>
+    <h2>Contact Us</h2>
+    <div class="contact-items">
+      <div class="c-item">
+        <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="c-label">LOCATION</div><div class="c-val">Garissa Road, Thika<br>Nairobi, Kenya</div></div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div><div class="c-label">PHONE</div><div class="c-val"><a href="tel:+254750400060" style="color:inherit;text-decoration:none;">+254 750 400 060</a><br><a href="tel:+254706400060" style="color:inherit;text-decoration:none;">+254 706 400 060</a></div></div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon" style="background:#e8f8f0;border-left-color:#25d366;">
+          <svg viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.285 7.04L.785 23.5l4.59-1.478A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.368l-.36-.214-3.716 1.197 1.188-3.618-.235-.372A9.818 9.818 0 1112 21.818z"/></svg>
+        </div>
+        <div><div class="c-label" style="color:#25d366;">WHATSAPP</div><div class="c-val"><a href="https://wa.me/254750400060" target="_blank" style="color:inherit;text-decoration:none;">Chat on WhatsApp</a></div></div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><div class="c-label">EMAIL</div><div class="c-val"><a href="mailto:harivarsteelcentre@gmail.com" style="color:inherit;text-decoration:none;">harivarsteelcentre@gmail.com</a></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="map-wrap">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0!2d37.0832!3d-1.0395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4be027f2b0e3%3A0x1b0f40c9a2a41da0!2sGarissa%20Rd%2C%20Thika!5e0!3m2!1sen!2ske!4v1748000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map-footer">
+      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>GARISSA ROAD, THIKA · NAIROBI, KENYA</span>
+    </div>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <div class="cta-text">
+    <h3>Ready to Transport Your Next Shipment?</h3>
+    <p>Get in touch today for competitive rates and reliable service across Kenya.</p>
+  </div>
+  <div class="cta-actions">
+    <button class="cta-btn-w">CALL US NOW</button>
+    <button class="cta-btn-o">SEND ENQUIRY</button>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="logo-name" style="color:white;font-size:17px;">HARIVAR STEEL CENTRE LTD<span style="color:var(--sky-mid);">THIKA · NAIROBI, KENYA</span></div>
+      <p class="footer-desc">Trusted logistics partner for cement and steel transport across Kenya. Building Kenya, one delivery at a time.</p>
+    </div>
+    <div class="footer-col">
+      <h4>QUICK LINKS</h4>
+      <a href="#">Home</a><a href="#">Services</a><a href="#">About Us</a><a href="#">Gallery</a><a href="#">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>CONTACT</h4>
+      <a href="#">+254 750 400 060</a><a href="#">+254 706 400 060</a><a href="#">harivarsteelcentre@gmail.com</a><a href="#">Garissa Road, Thika</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 <strong>Harivar Steel Centre LTD</strong>. All Rights Reserved.</p>
+    <p>Thika, Nairobi, Kenya</p>
+  </div>
+</footer>
+
+</div>
 </body>
 </html>
