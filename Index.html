@@ -4,252 +4,673 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harivar Steel Centre Ltd | Cement & Steel Transport — Kenya</title>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-:root{
-  --navy:#0a1628;
-  --navy2:#0f2040;
-  --blue:#1565a8;
-  --blue2:#1a7fc1;
-  --sky:#3aa0d8;
-  --gold:#c8860a;
-  --gold2:#e6a020;
-  --white:#ffffff;
-  --off:#f4f7fb;
-  --light:#e8f2f9;
-  --text:#1a2535;
-  --muted:#5a7080;
-  --border:#d0dde8;
+:root {
+  --navy:  #08111e;
+  --navy2: #0c1c30;
+  --blue:  #0f4c81;
+  --blue2: #1565a8;
+  --sky:   #2a8fc5;
+  --gold:  #b8780a;
+  --gold2: #d4920f;
+  --gold3: #f0b030;
+  --white: #ffffff;
+  --off:   #f5f7fa;
+  --light: #e8f0f8;
+  --text:  #111820;
+  --muted: #4a6070;
+  --border:#ccd8e4;
 }
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;}
-img{display:block;max-width:100%;}
-a{text-decoration:none;color:inherit;}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'EB Garamond', 'Times New Roman', Georgia, serif;
+  color: var(--text);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
 
-/* ── TOPBAR ── */
-#topbar{background:var(--navy);padding:0 5vw;}
-.topbar-inner{max-width:1400px;margin:0 auto;height:40px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-.tb-contacts{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-.tb-link{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,.55);font-family:'Oswald',sans-serif;font-weight:300;letter-spacing:.06em;white-space:nowrap;transition:color .2s;}
-.tb-link:hover{color:#fff;}
-.tb-link svg{width:12px;height:12px;stroke:var(--sky);fill:none;stroke-width:2;flex-shrink:0;}
-.tb-link.wa svg{stroke:none;fill:#25d366;}
-.tb-divider{width:1px;height:14px;background:rgba(255,255,255,.12);}
-.tb-socials{display:flex;align-items:center;gap:2px;}
-.tb-soc{width:32px;height:32px;display:flex;align-items:center;justify-content:center;transition:background .2s;border-radius:2px;}
-.tb-soc:hover{background:rgba(255,255,255,.1);}
-.tb-soc svg{width:13px;height:13px;fill:rgba(255,255,255,.45);}
-.tb-soc:hover svg{fill:#fff;}
+/* ─── TOPBAR ─────────────────────── */
+#topbar { background: var(--navy); padding: 0 5vw; }
+.topbar-inner {
+  max-width: 1400px; margin: 0 auto;
+  height: 42px; display: flex; align-items: center;
+  justify-content: space-between; gap: 16px;
+}
+.tb-contacts { display: flex; align-items: center; gap: 0; }
+.tb-link {
+  font-family: 'EB Garamond', serif;
+  font-size: 13px; font-style: italic;
+  color: rgba(255,255,255,.55);
+  padding: 0 18px;
+  border-right: 1px solid rgba(255,255,255,.1);
+  line-height: 42px;
+  white-space: nowrap;
+  transition: color .2s;
+}
+.tb-link:first-child { padding-left: 0; }
+.tb-link:hover { color: var(--gold3); }
+.tb-socials { display: flex; align-items: center; gap: 0; }
+.tb-soc {
+  width: 36px; height: 42px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'EB Garamond', serif;
+  font-size: 11px; letter-spacing: .1em;
+  color: rgba(255,255,255,.4);
+  transition: color .2s;
+}
+.tb-soc:hover { color: #fff; }
+.tb-soc svg { width: 13px; height: 13px; fill: currentColor; }
 
-/* ── HEADER ── */
-#header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;box-shadow:0 2px 16px rgba(10,22,40,.07);}
-.header-inner{max-width:1400px;margin:0 auto;padding:0 5vw;height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
-.logo{display:flex;align-items:center;gap:13px;}
-.logo-icon{width:48px;height:48px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.logo-icon svg{width:24px;height:24px;fill:#fff;}
-.logo-text{}
-.logo-name{font-family:'Oswald',sans-serif;font-size:18px;font-weight:600;color:var(--navy);letter-spacing:.04em;line-height:1.1;}
-.logo-tagline{font-family:'Oswald',sans-serif;font-size:10px;font-weight:300;letter-spacing:.22em;color:var(--blue);margin-top:2px;}
-.main-nav{display:flex;align-items:center;}
-.main-nav a{font-family:'Oswald',sans-serif;font-size:13px;font-weight:500;letter-spacing:.14em;color:var(--muted);padding:0 16px;height:78px;display:flex;align-items:center;border-bottom:3px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap;}
-.main-nav a:hover,.main-nav a.active{color:var(--navy);border-bottom-color:var(--gold);}
-.header-cta{display:flex;align-items:center;gap:12px;flex-shrink:0;}
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Oswald',sans-serif;font-size:13px;font-weight:500;letter-spacing:.14em;padding:12px 24px;cursor:pointer;border:none;transition:all .2s;white-space:nowrap;}
-.btn-primary{background:var(--blue);color:#fff;}
-.btn-primary:hover{background:var(--blue2);}
-.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--border);}
-.btn-outline:hover{border-color:var(--blue);color:var(--blue);}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
-.hamburger span{width:24px;height:2px;background:var(--navy);display:block;transition:all .25s;}
+/* ─── HEADER ─────────────────────── */
+#header {
+  background: #fff;
+  border-bottom: 2px solid var(--gold2);
+  position: sticky; top: 0; z-index: 200;
+  box-shadow: 0 2px 24px rgba(8,17,30,.08);
+}
+.header-inner {
+  max-width: 1400px; margin: 0 auto;
+  padding: 0 5vw; height: 80px;
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 24px;
+}
+.logo { display: flex; align-items: center; gap: 0; }
+.logo-badge {
+  width: 6px; height: 56px;
+  background: linear-gradient(180deg, var(--gold3) 0%, var(--gold) 100%);
+  margin-right: 16px; flex-shrink: 0;
+}
+.logo-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--navy); letter-spacing: .06em; line-height: 1.1;
+}
+.logo-sub {
+  font-family: 'EB Garamond', serif;
+  font-size: 11.5px; font-style: italic;
+  color: var(--blue); margin-top: 3px; letter-spacing: .08em;
+}
+.main-nav { display: flex; align-items: center; }
+.main-nav a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; font-weight: 600;
+  letter-spacing: .12em;
+  color: var(--muted);
+  padding: 0 18px; height: 80px;
+  display: flex; align-items: center;
+  border-bottom: 3px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+.main-nav a:hover, .main-nav a.active {
+  color: var(--navy); border-bottom-color: var(--gold2);
+}
+.header-right { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.btn {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; font-weight: 600;
+  letter-spacing: .1em;
+  padding: 11px 26px;
+  cursor: pointer; border: none;
+  transition: all .2s;
+  white-space: nowrap; display: inline-block;
+}
+.btn-outline {
+  background: transparent; color: var(--navy);
+  border: 1.5px solid var(--border);
+}
+.btn-outline:hover { border-color: var(--blue); color: var(--blue); }
+.btn-solid { background: var(--blue); color: #fff; }
+.btn-solid:hover { background: var(--blue2); }
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.hamburger span {
+  width: 24px; height: 2px; background: var(--navy);
+  display: block; transition: all .25s;
+}
 
-/* ── MOBILE NAV ── */
-.mob-overlay{display:none;position:fixed;inset:0;background:var(--navy);z-index:500;flex-direction:column;padding:24px 28px;}
-.mob-overlay.open{display:flex;}
-.mob-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;}
-.mob-logo{font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;color:#fff;}
-.mob-close{background:none;border:none;color:#fff;font-size:30px;cursor:pointer;line-height:1;}
-.mob-overlay a{font-family:'Oswald',sans-serif;font-size:28px;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.08);padding:18px 0;transition:color .2s;}
-.mob-overlay a:hover{color:#fff;}
-.mob-footer{margin-top:auto;font-family:'Source Sans 3',sans-serif;font-size:12px;color:rgba(255,255,255,.3);}
+/* ─── MOBILE NAV ─────────────────── */
+.mob-nav {
+  display: none; position: fixed; inset: 0;
+  background: var(--navy2); z-index: 500;
+  flex-direction: column; padding: 28px 32px;
+}
+.mob-nav.open { display: flex; }
+.mob-top {
+  display: flex; justify-content: space-between;
+  align-items: center; margin-bottom: 48px;
+}
+.mob-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 700; color: #fff; letter-spacing: .06em;
+}
+.mob-close {
+  background: none; border: none;
+  color: rgba(255,255,255,.6); font-size: 32px;
+  cursor: pointer; line-height: 1; font-family: serif;
+}
+.mob-nav a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px; font-weight: 600;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.65);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  padding: 18px 0;
+  transition: color .2s;
+}
+.mob-nav a:hover { color: var(--gold3); }
+.mob-footer {
+  margin-top: auto;
+  font-family: 'EB Garamond', serif;
+  font-size: 13px; font-style: italic;
+  color: rgba(255,255,255,.3);
+}
 
-/* ── HERO ── */
-.hero{position:relative;width:100%;min-height:clamp(480px,72vh,700px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,16,30,.93) 0%,rgba(12,32,68,.78) 45%,rgba(10,22,60,.4) 100%);}
-.hero-content{position:relative;z-index:2;max-width:1400px;width:100%;margin:0 auto;padding:clamp(40px,6vw,80px) 5vw clamp(60px,7vw,100px);display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;}
-.hero-left{max-width:660px;}
-.hero-flag{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;}
-.hero-flag-bar{width:36px;height:3px;background:var(--gold2);}
-.hero-flag span{font-family:'Oswald',sans-serif;font-size:11px;font-weight:400;letter-spacing:.26em;color:rgba(255,255,255,.55);}
-.hero h1{font-family:'Oswald',sans-serif;font-size:clamp(42px,7vw,80px);font-weight:700;color:#fff;line-height:1.0;letter-spacing:.02em;margin-bottom:8px;}
-.hero h1 span{color:var(--sky);}
-.hero-sub-line{font-family:'Oswald',sans-serif;font-size:clamp(18px,2.5vw,26px);font-weight:300;color:rgba(255,255,255,.55);letter-spacing:.08em;margin-bottom:28px;}
-.hero-desc{font-size:15px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.85;max-width:500px;margin-bottom:36px;}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
-.btn-hero-p{background:var(--gold2);color:var(--navy);font-weight:600;}
-.btn-hero-p:hover{background:#f0b530;}
-.btn-hero-o{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35);font-family:'Oswald',sans-serif;font-size:13px;font-weight:500;letter-spacing:.14em;padding:12px 24px;cursor:pointer;transition:all .2s;}
-.btn-hero-o:hover{border-color:#fff;background:rgba(255,255,255,.07);}
-.hero-right{display:flex;flex-direction:column;gap:0;border-left:3px solid var(--gold2);flex-shrink:0;}
-.hstat{padding:18px 28px;border-bottom:1px solid rgba(255,255,255,.1);}
-.hstat:last-child{border-bottom:none;}
-.hstat-n{font-family:'Oswald',sans-serif;font-size:42px;font-weight:700;color:#fff;line-height:1;}
-.hstat-l{font-family:'Oswald',sans-serif;font-size:10px;font-weight:300;letter-spacing:.22em;color:rgba(255,255,255,.4);margin-top:2px;}
+/* ─── HERO SLIDESHOW ─────────────── */
+.hero {
+  position: relative; width: 100%;
+  height: clamp(520px, 78vh, 780px);
+  overflow: hidden;
+}
+.slide {
+  position: absolute; inset: 0;
+  opacity: 0; transition: opacity 1.4s ease-in-out;
+  background-size: cover; background-position: center;
+}
+.slide.active { opacity: 1; }
+/* Bright, high-contrast images */
+.slide:nth-child(1){ background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=90'); filter:brightness(1.05) saturate(1.1);}
+.slide:nth-child(2){ background-image:url('https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=1600&q=90'); filter:brightness(1.08) saturate(1.1);}
+.slide:nth-child(3){ background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=90'); filter:brightness(1.05) saturate(1.15);}
+.slide:nth-child(4){ background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&q=90'); filter:brightness(1.1) saturate(1.1);}
+.slide:nth-child(5){ background-image:url('https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1600&q=90'); filter:brightness(1.1) saturate(1.05);}
+.slide:nth-child(6){ background-image:url('https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1600&q=90'); filter:brightness(1.08) saturate(1.1);}
 
-/* ── STRIP ── */
-.strip{background:var(--blue);display:grid;grid-template-columns:repeat(3,1fr);}
-@media(max-width:640px){.strip{grid-template-columns:1fr;}}
-.strip-item{padding:clamp(20px,3vw,32px) clamp(20px,3vw,36px);display:flex;align-items:center;gap:18px;border-right:1px solid rgba(255,255,255,.15);transition:background .2s;cursor:default;}
-.strip-item:last-child{border-right:none;}
-@media(max-width:640px){.strip-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.12);}
-.strip-item:last-child{border-bottom:none;}}
-.strip-item:hover{background:var(--blue2);}
-.si-icon{width:44px;height:44px;border:1.5px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.si-icon svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.8;}
-.si-text h3{font-family:'Oswald',sans-serif;font-size:14px;font-weight:500;color:#fff;letter-spacing:.1em;margin-bottom:4px;}
-.si-text p{font-size:12.5px;color:rgba(255,255,255,.6);line-height:1.6;}
+.hero-overlay {
+  position: absolute; inset: 0; z-index: 2;
+  background: linear-gradient(105deg,
+    rgba(8,17,30,.82) 0%,
+    rgba(12,32,65,.65) 50%,
+    rgba(8,17,30,.25) 100%);
+}
+.hero-content {
+  position: relative; z-index: 3;
+  height: 100%;
+  max-width: 1400px; margin: 0 auto;
+  padding: 0 5vw;
+  display: flex; align-items: flex-end;
+  justify-content: space-between; gap: 40px;
+  padding-bottom: clamp(48px, 7vw, 90px);
+  flex-wrap: wrap;
+}
+.hero-left { max-width: 640px; }
+.hero-rule {
+  width: 60px; height: 3px;
+  background: var(--gold3);
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(46px, 7vw, 88px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.0;
+  letter-spacing: .01em;
+  margin-bottom: 12px;
+}
+.hero h1 em { font-style: italic; color: var(--gold3); }
+.hero-sub {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(16px, 2vw, 22px);
+  font-style: italic;
+  color: rgba(255,255,255,.6);
+  letter-spacing: .06em;
+  margin-bottom: 28px;
+}
+.hero-desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255,255,255,.55);
+  line-height: 1.9;
+  max-width: 500px;
+  margin-bottom: 36px;
+}
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-hero-gold {
+  background: var(--gold2); color: var(--navy);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; font-weight: 700;
+  letter-spacing: .12em;
+  padding: 14px 32px;
+  border: none; cursor: pointer; transition: all .2s;
+}
+.btn-hero-gold:hover { background: var(--gold3); }
+.btn-hero-ghost {
+  background: transparent; color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; font-weight: 600;
+  letter-spacing: .12em;
+  padding: 13px 30px;
+  border: 1.5px solid rgba(255,255,255,.35);
+  cursor: pointer; transition: all .2s;
+}
+.btn-hero-ghost:hover { border-color: #fff; background: rgba(255,255,255,.07); }
 
-/* ── ABOUT ── */
-.about{background:#fff;padding:clamp(60px,8vw,100px) 5vw;}
-.about-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);align-items:center;}
-@media(max-width:860px){.about-inner{grid-template-columns:1fr;}}
-.section-label{font-family:'Oswald',sans-serif;font-size:11px;font-weight:400;letter-spacing:.28em;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:16px;}
-.section-label::before{content:'';width:28px;height:2px;background:var(--gold);}
-.section-h{font-family:'Oswald',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:700;color:var(--navy);line-height:1.1;letter-spacing:.02em;margin-bottom:16px;}
-.section-h span{color:var(--blue);}
-.section-body{font-size:15px;color:var(--muted);line-height:1.9;font-weight:300;margin-bottom:32px;}
-.checklist{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);}
-.check-item{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid var(--border);}
-.check-dot{width:8px;height:8px;background:var(--gold2);margin-top:5px;flex-shrink:0;}
-.check-item strong{font-family:'Oswald',sans-serif;font-size:13px;font-weight:500;letter-spacing:.08em;color:var(--navy);display:block;margin-bottom:3px;}
-.check-item p{font-size:13px;color:var(--muted);line-height:1.6;}
-.about-img-wrap{position:relative;}
-.about-img{width:100%;height:clamp(300px,40vw,460px);object-fit:cover;}
-.about-tag{position:absolute;bottom:0;left:0;background:var(--gold2);color:var(--navy);padding:20px 28px;}
-.about-tag .big{font-family:'Oswald',sans-serif;font-size:40px;font-weight:700;line-height:1;}
-.about-tag .sm{font-family:'Oswald',sans-serif;font-size:11px;font-weight:400;letter-spacing:.2em;margin-top:3px;}
+/* Stat panel */
+.hero-stats {
+  display: flex; flex-direction: column;
+  border-left: 3px solid var(--gold2);
+  flex-shrink: 0;
+}
+.hstat { padding: 20px 32px; border-bottom: 1px solid rgba(255,255,255,.1); }
+.hstat:last-child { border-bottom: none; }
+.hstat-n {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 50px; font-weight: 700;
+  color: #fff; line-height: 1;
+}
+.hstat-l {
+  font-family: 'EB Garamond', serif;
+  font-size: 11px; font-style: italic;
+  letter-spacing: .18em;
+  color: rgba(255,255,255,.4);
+  margin-top: 4px;
+}
 
-/* ── SERVICES ── */
-.services{background:var(--off);padding:clamp(60px,8vw,100px) 5vw;}
-.services-inner{max-width:1400px;margin:0 auto;}
-.section-header{margin-bottom:48px;}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
-@media(max-width:860px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:560px){.svc-grid{grid-template-columns:1fr;}}
-.svc-card{background:#fff;padding:clamp(28px,3vw,40px) clamp(24px,2.5vw,32px);border-top:4px solid transparent;transition:border-color .25s,box-shadow .25s;}
-.svc-card:hover{border-top-color:var(--gold2);box-shadow:0 8px 40px rgba(10,22,60,.08);}
-.svc-num{font-family:'Oswald',sans-serif;font-size:11px;font-weight:400;letter-spacing:.24em;color:var(--sky);margin-bottom:20px;}
-.svc-icon-box{width:54px;height:54px;background:var(--light);border-left:3px solid var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:22px;}
-.svc-icon-box svg{width:24px;height:24px;stroke:var(--blue);fill:none;stroke-width:1.7;}
-.svc-card h3{font-family:'Oswald',sans-serif;font-size:20px;font-weight:600;color:var(--navy);letter-spacing:.04em;margin-bottom:12px;}
-.svc-card p{font-size:14px;color:var(--muted);line-height:1.8;font-weight:300;}
-.svc-more{margin-top:24px;font-family:'Oswald',sans-serif;font-size:12px;font-weight:500;letter-spacing:.16em;color:var(--blue);display:inline-flex;align-items:center;gap:6px;transition:gap .2s;}
-.svc-card:hover .svc-more{gap:10px;}
-.svc-more::after{content:'→';}
+/* Slide dots */
+.hero-dots {
+  position: absolute; bottom: 20px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 4; display: flex; gap: 8px;
+}
+.dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: rgba(255,255,255,.35);
+  cursor: pointer; transition: all .3s;
+  border: none;
+}
+.dot.active { background: var(--gold3); transform: scale(1.3); }
 
-/* ── WHY US ── */
-.why{background:var(--navy);padding:clamp(60px,8vw,100px) 5vw;}
-.why-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(40px,6vw,80px);align-items:center;}
-@media(max-width:860px){.why-inner{grid-template-columns:1fr;}}
-.why-left .section-label{color:var(--gold2);}
-.why-left .section-label::before{background:var(--gold2);}
-.why-left .section-h{color:#fff;}
-.why-left .section-body{color:rgba(255,255,255,.5);}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
-@media(max-width:480px){.why-grid{grid-template-columns:1fr;}}
-.why-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:28px 24px;transition:background .2s;}
-.why-card:hover{background:rgba(255,255,255,.07);}
-.why-card svg{width:28px;height:28px;stroke:var(--gold2);fill:none;stroke-width:1.6;margin-bottom:16px;}
-.why-card h4{font-family:'Oswald',sans-serif;font-size:15px;font-weight:500;color:#fff;letter-spacing:.06em;margin-bottom:8px;}
-.why-card p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.7;font-weight:300;}
+/* ─── BLUE STRIP ─────────────────── */
+.strip {
+  background: var(--blue);
+  display: grid; grid-template-columns: repeat(3,1fr);
+}
+@media(max-width:640px){ .strip{ grid-template-columns:1fr; } }
+.strip-item {
+  padding: clamp(20px,3vw,36px) clamp(24px,3vw,40px);
+  border-right: 1px solid rgba(255,255,255,.15);
+  transition: background .2s;
+}
+.strip-item:last-child { border-right: none; }
+@media(max-width:640px){
+  .strip-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .strip-item:last-child { border-bottom: none; }
+}
+.strip-item:hover { background: var(--blue2); }
+.strip-item h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 700;
+  color: #fff; letter-spacing: .06em;
+  margin-bottom: 6px;
+}
+.strip-item p {
+  font-size: 14px; color: rgba(255,255,255,.65);
+  line-height: 1.7;
+}
 
-/* ── GALLERY ── */
-.gallery{padding:clamp(60px,8vw,100px) 5vw;background:#fff;}
-.gallery-inner{max-width:1400px;margin:0 auto;}
-.gal-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:6px;margin-top:40px;}
-@media(max-width:768px){.gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
-.gal-item:first-child{grid-column:1/3;}}
-@media(max-width:480px){.gal-grid{grid-template-columns:1fr;}.gal-item:first-child{grid-column:auto;}}
-.gal-item{overflow:hidden;position:relative;background:var(--light);}
-.gal-item:first-child{grid-row:1/3;}
-.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease;display:block;}
-.gal-item:hover img{transform:scale(1.06);}
-.gal-over{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,40,.75) 0%,transparent 50%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:18px;}
-.gal-item:hover .gal-over{opacity:1;}
-.gal-over span{font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.18em;color:rgba(255,255,255,.85);}
-.gal-ph{width:100%;height:100%;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed var(--border);}
-.gal-ph svg{width:28px;height:28px;stroke:var(--border);fill:none;}
-.gal-ph span{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.2em;color:var(--border);}
+/* ─── ABOUT ──────────────────────── */
+.about { background: #fff; padding: clamp(64px,8vw,100px) 5vw; }
+.about-inner {
+  max-width: 1400px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(40px,6vw,96px); align-items: center;
+}
+@media(max-width:860px){ .about-inner{ grid-template-columns:1fr; } }
+.sec-label {
+  font-family: 'EB Garamond', serif;
+  font-size: 12px; font-style: italic;
+  letter-spacing: .24em; color: var(--gold);
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 16px;
+}
+.sec-label::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+.sec-h {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-weight: 700;
+  color: var(--navy); line-height: 1.1;
+  letter-spacing: .01em; margin-bottom: 18px;
+}
+.sec-h em { font-style: italic; color: var(--blue); }
+.sec-body {
+  font-size: 16px; color: var(--muted);
+  line-height: 1.95; font-weight: 400;
+  margin-bottom: 32px;
+}
+.checklist { border-top: 1px solid var(--border); }
+.ch {
+  display: flex; gap: 16px;
+  padding: 18px 0; border-bottom: 1px solid var(--border);
+}
+.ch-line {
+  width: 2px; background: var(--gold2);
+  flex-shrink: 0; margin-top: 3px;
+}
+.ch strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px; font-weight: 700;
+  letter-spacing: .06em; color: var(--navy);
+  display: block; margin-bottom: 4px;
+}
+.ch p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+.about-img-block { position: relative; }
+.about-img {
+  width: 100%;
+  height: clamp(320px, 42vw, 500px);
+  object-fit: cover;
+  display: block;
+}
+.about-badge {
+  position: absolute; bottom: 0; left: 0;
+  background: var(--gold2); color: var(--navy);
+  padding: 22px 30px;
+}
+.about-badge .big {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 46px; font-weight: 700; line-height: 1;
+}
+.about-badge .sm {
+  font-family: 'EB Garamond', serif;
+  font-size: 11px; font-style: italic;
+  letter-spacing: .18em; margin-top: 4px;
+}
 
-/* ── CONTACT ── */
-.contact{background:var(--off);padding:clamp(60px,8vw,100px) 5vw;}
-.contact-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,5vw,64px);}
-@media(max-width:768px){.contact-inner{grid-template-columns:1fr;}}
-.contact-cards{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);background:#fff;margin-top:32px;}
-.c-card{display:flex;align-items:flex-start;gap:16px;padding:20px 22px;border-bottom:1px solid var(--border);transition:background .2s;}
-.c-card:last-child{border-bottom:none;}
-.c-card:hover{background:var(--light);}
-.c-ico{width:42px;height:42px;background:var(--light);border-left:3px solid var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.c-ico svg{width:17px;height:17px;stroke:var(--blue);fill:none;stroke-width:2;}
-.c-ico.wa{background:#e6f9ed;border-left-color:#25d366;}
-.c-ico.wa svg{stroke:none;fill:#25d366;}
-.c-lbl{font-family:'Oswald',sans-serif;font-size:10px;font-weight:400;letter-spacing:.22em;color:var(--blue);margin-bottom:4px;}
-.c-lbl.wa{color:#25d366;}
-.c-val{font-size:14px;color:var(--text);line-height:1.7;font-weight:400;}
-.c-val a{color:inherit;transition:color .2s;}
-.c-val a:hover{color:var(--blue);}
-.map-box{border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;background:#fff;}
-.map-box iframe{width:100%;height:clamp(260px,30vw,360px);border:none;display:block;filter:grayscale(.2);}
-.map-label{background:var(--blue);padding:14px 18px;display:flex;align-items:center;gap:8px;}
-.map-label svg{width:13px;height:13px;stroke:rgba(255,255,255,.7);fill:none;stroke-width:2;}
-.map-label span{font-family:'Oswald',sans-serif;font-size:11px;font-weight:400;letter-spacing:.16em;color:rgba(255,255,255,.8);}
+/* ─── SERVICES ───────────────────── */
+.services { background: var(--off); padding: clamp(64px,8vw,100px) 5vw; }
+.services-inner { max-width: 1400px; margin: 0 auto; }
+.svc-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 2px; margin-top: 48px;
+}
+@media(max-width:860px){ .svc-grid{ grid-template-columns: repeat(2,1fr); } }
+@media(max-width:560px){ .svc-grid{ grid-template-columns: 1fr; } }
+.svc {
+  background: #fff;
+  padding: clamp(28px,3vw,42px) clamp(24px,2.5vw,36px);
+  border-top: 3px solid transparent;
+  transition: border-color .25s, box-shadow .25s;
+}
+.svc:hover {
+  border-top-color: var(--gold2);
+  box-shadow: 0 10px 48px rgba(10,22,60,.07);
+}
+.svc-n {
+  font-family: 'EB Garamond', serif;
+  font-size: 11px; font-style: italic;
+  letter-spacing: .22em; color: var(--sky);
+  margin-bottom: 22px;
+}
+.svc h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--navy); letter-spacing: .03em;
+  margin-bottom: 12px;
+}
+.svc p { font-size: 15px; color: var(--muted); line-height: 1.85; }
+.svc-more {
+  margin-top: 24px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; font-weight: 600;
+  letter-spacing: .14em; color: var(--blue);
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: gap .2s;
+}
+.svc:hover .svc-more { gap: 10px; }
+.svc-more::after { content: '→'; }
 
-/* ── BANNER ── */
-.banner{background:var(--gold2);padding:clamp(40px,6vw,60px) 5vw;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
-.banner h3{font-family:'Oswald',sans-serif;font-size:clamp(22px,3.5vw,34px);font-weight:700;color:var(--navy);letter-spacing:.03em;line-height:1.2;}
-.banner p{font-size:14px;color:rgba(10,22,40,.65);font-weight:300;margin-top:6px;}
-.banner-btns{display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0;}
-.btn-nav{background:var(--navy);color:#fff;font-family:'Oswald',sans-serif;font-size:13px;font-weight:500;letter-spacing:.14em;padding:13px 28px;border:none;cursor:pointer;transition:background .2s;}
-.btn-nav:hover{background:var(--navy2);}
-.btn-nav-o{background:transparent;color:var(--navy);border:2px solid rgba(10,22,40,.35);font-family:'Oswald',sans-serif;font-size:13px;font-weight:500;letter-spacing:.14em;padding:12px 26px;cursor:pointer;transition:border-color .2s;}
-.btn-nav-o:hover{border-color:var(--navy);}
+/* ─── WHY US ─────────────────────── */
+.why { background: var(--navy); padding: clamp(64px,8vw,100px) 5vw; }
+.why-inner {
+  max-width: 1400px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1.5fr;
+  gap: clamp(40px,6vw,80px); align-items: center;
+}
+@media(max-width:860px){ .why-inner{ grid-template-columns: 1fr; } }
+.why-left .sec-label { color: var(--gold3); }
+.why-left .sec-label::before { background: var(--gold3); }
+.why-left .sec-h { color: #fff; }
+.why-left .sec-h em { color: var(--sky); }
+.why-left .sec-body { color: rgba(255,255,255,.5); }
+.why-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+@media(max-width:480px){ .why-grid{ grid-template-columns: 1fr; } }
+.why-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.07);
+  padding: 32px 26px;
+  transition: background .2s;
+}
+.why-card:hover { background: rgba(255,255,255,.07); }
+.why-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 700;
+  color: #fff; letter-spacing: .04em;
+  margin-bottom: 10px;
+}
+.why-card h4::before {
+  content: '—';
+  color: var(--gold2); margin-right: 8px;
+  font-style: italic;
+}
+.why-card p { font-size: 14px; color: rgba(255,255,255,.45); line-height: 1.75; }
 
-/* ── FOOTER ── */
-footer{background:var(--navy2);padding:clamp(48px,6vw,72px) 5vw 0;}
-.footer-inner{max-width:1400px;margin:0 auto;}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:clamp(24px,4vw,64px);padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07);}
-@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:480px){.footer-grid{grid-template-columns:1fr;}}
-.footer-brand .logo-name{font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;color:#fff;letter-spacing:.04em;}
-.footer-brand .logo-tagline{color:var(--sky);}
-.footer-brand p{font-size:13px;color:rgba(255,255,255,.38);line-height:1.85;font-weight:300;margin-top:16px;max-width:260px;}
-.footer-col h4{font-family:'Oswald',sans-serif;font-size:10px;font-weight:400;letter-spacing:.26em;color:var(--sky);margin-bottom:18px;}
-.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,.45);line-height:2.4;font-weight:300;transition:color .18s;}
-.footer-col a:hover{color:#fff;}
-.footer-bottom{max-width:1400px;margin:0 auto;height:50px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
-.footer-bottom p{font-size:12px;color:rgba(255,255,255,.22);letter-spacing:.06em;}
-.footer-bottom strong{color:rgba(255,255,255,.35);font-weight:400;}
-.gold-bar{height:4px;background:linear-gradient(90deg,var(--gold2) 0%,var(--gold) 50%,transparent 100%);}
+/* ─── GALLERY ────────────────────── */
+.gallery { background: #fff; padding: clamp(64px,8vw,100px) 5vw; }
+.gallery-inner { max-width: 1400px; margin: 0 auto; }
+.gal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 260px;
+  gap: 8px;
+  margin-top: 48px;
+}
+@media(max-width:768px){
+  .gal-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 220px; }
+}
+@media(max-width:480px){
+  .gal-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+}
+.gal-item {
+  overflow: hidden; position: relative;
+  background: var(--light);
+}
+.gal-item img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform .6s ease;
+  filter: brightness(1.05) saturate(1.1);
+}
+.gal-item:hover img { transform: scale(1.07); }
+.gal-cap {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(8,17,30,.78) 0%, transparent 100%);
+  padding: 20px 18px 16px;
+  opacity: 0; transition: opacity .3s;
+}
+.gal-item:hover .gal-cap { opacity: 1; }
+.gal-cap span {
+  font-family: 'EB Garamond', serif;
+  font-size: 13px; font-style: italic;
+  letter-spacing: .16em; color: rgba(255,255,255,.9);
+}
 
-/* ── RESPONSIVE ── */
-@media(max-width:960px){.main-nav,.header-cta .btn-outline{display:none;}.hamburger{display:flex;}}
-@media(max-width:600px){.hero-right{display:none;}.tb-contacts .tb-link:nth-child(n+4){display:none;}.tb-divider:nth-child(n+3){display:none;}}
+/* ─── CONTACT ────────────────────── */
+.contact { background: var(--off); padding: clamp(64px,8vw,100px) 5vw; }
+.contact-inner {
+  max-width: 1400px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1.1fr;
+  gap: clamp(32px,5vw,64px);
+}
+@media(max-width:768px){ .contact-inner{ grid-template-columns: 1fr; } }
+.c-list {
+  border: 1px solid var(--border);
+  background: #fff; margin-top: 32px;
+}
+.c-row {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 4px;
+  transition: background .2s;
+}
+.c-row:last-child { border-bottom: none; }
+.c-row:hover { background: var(--light); }
+.c-lbl {
+  font-family: 'EB Garamond', serif;
+  font-size: 11px; font-style: italic;
+  letter-spacing: .2em; color: var(--blue);
+}
+.c-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; font-weight: 600;
+  color: var(--text); line-height: 1.5;
+}
+.c-val a { color: inherit; transition: color .2s; }
+.c-val a:hover { color: var(--blue); }
+.c-val.wa a { color: #1a9e45; }
+.map-wrap {
+  border: 1px solid var(--border);
+  overflow: hidden; display: flex;
+  flex-direction: column; background: #fff;
+}
+.map-wrap iframe {
+  width: 100%; height: clamp(280px,32vw,380px);
+  border: none; display: block; filter: saturate(.85);
+}
+.map-foot {
+  background: var(--blue); padding: 14px 20px;
+  font-family: 'EB Garamond', serif;
+  font-size: 13px; font-style: italic;
+  letter-spacing: .1em; color: rgba(255,255,255,.8);
+}
+
+/* ─── BANNER ─────────────────────── */
+.banner {
+  background: var(--gold2);
+  padding: clamp(48px,6vw,72px) 5vw;
+  display: flex; align-items: center;
+  justify-content: space-between;
+  gap: 28px; flex-wrap: wrap;
+}
+.banner-left h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px,3.5vw,38px);
+  font-weight: 700; color: var(--navy);
+  line-height: 1.2; margin-bottom: 6px;
+}
+.banner-left p {
+  font-size: 15px; color: rgba(10,17,30,.6);
+}
+.banner-btns { display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
+.btn-bnav {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; font-weight: 700;
+  letter-spacing: .12em;
+  padding: 13px 30px; cursor: pointer;
+  border: none; transition: all .2s;
+}
+.btn-bnav-dark { background: var(--navy); color: #fff; }
+.btn-bnav-dark:hover { background: var(--navy2); }
+.btn-bnav-out {
+  background: transparent; color: var(--navy);
+  border: 2px solid rgba(10,17,30,.3);
+}
+.btn-bnav-out:hover { border-color: var(--navy); }
+
+/* ─── FOOTER ─────────────────────── */
+footer { background: var(--navy2); padding: clamp(48px,6vw,72px) 5vw 0; }
+.footer-inner { max-width: 1400px; margin: 0 auto; }
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: clamp(24px,4vw,64px);
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+@media(max-width:768px){ .footer-grid{ grid-template-columns: 1fr 1fr; } }
+@media(max-width:480px){ .footer-grid{ grid-template-columns: 1fr; } }
+.footer-brand .flogo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 700;
+  color: #fff; letter-spacing: .05em;
+}
+.footer-brand .flogo-sub {
+  font-family: 'EB Garamond', serif;
+  font-size: 12px; font-style: italic;
+  color: var(--sky); margin-top: 3px; letter-spacing: .1em;
+}
+.footer-brand p {
+  font-size: 13.5px; color: rgba(255,255,255,.38);
+  line-height: 1.9; margin-top: 16px; max-width: 260px;
+}
+.fc h4 {
+  font-family: 'EB Garamond', serif;
+  font-size: 11px; font-style: italic;
+  letter-spacing: .2em; color: var(--sky);
+  margin-bottom: 18px;
+}
+.fc a {
+  display: block; font-size: 14px;
+  color: rgba(255,255,255,.45);
+  line-height: 2.4; transition: color .18s;
+}
+.fc a:hover { color: #fff; }
+.footer-bottom {
+  max-width: 1400px; margin: 0 auto;
+  height: 52px; display: flex;
+  align-items: center; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap;
+}
+.footer-bottom p {
+  font-size: 12px; color: rgba(255,255,255,.22);
+  letter-spacing: .06em;
+}
+.footer-bottom strong { color: rgba(255,255,255,.38); font-weight: 400; }
+.gold-rule {
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold3), var(--gold), transparent);
+}
+
+/* ─── RESPONSIVE ─────────────────── */
+@media(max-width:960px){
+  .main-nav, .header-right .btn-outline { display: none; }
+  .hamburger { display: flex; }
+}
+@media(max-width:600px){
+  .hero-stats { display: none; }
+  .tb-contacts .tb-link:nth-child(n+3) { display: none; }
+}
 </style>
 </head>
 <body>
 
-<!-- MOBILE OVERLAY -->
-<nav class="mob-overlay" id="mobNav">
+<!-- MOBILE NAV -->
+<nav class="mob-nav" id="mobNav">
   <div class="mob-top">
-    <div class="mob-logo">HARIVAR STEEL CENTRE LTD</div>
+    <div class="mob-brand">Harivar Steel Centre Ltd</div>
     <button class="mob-close" onclick="closeNav()">&times;</button>
   </div>
-  <a href="#" onclick="closeNav()">HOME</a>
-  <a href="#services" onclick="closeNav()">SERVICES</a>
-  <a href="#about" onclick="closeNav()">ABOUT US</a>
-  <a href="#gallery" onclick="closeNav()">GALLERY</a>
-  <a href="#contact" onclick="closeNav()">CONTACT</a>
+  <a href="#" onclick="closeNav()">Home</a>
+  <a href="#services" onclick="closeNav()">Services</a>
+  <a href="#about" onclick="closeNav()">About Us</a>
+  <a href="#gallery" onclick="closeNav()">Gallery</a>
+  <a href="#contact" onclick="closeNav()">Contact</a>
   <div class="mob-footer">Garissa Road, Thika &bull; Nairobi, Kenya</div>
 </nav>
 
@@ -257,25 +678,10 @@ footer{background:var(--navy2);padding:clamp(48px,6vw,72px) 5vw 0;}
 <div id="topbar">
   <div class="topbar-inner">
     <div class="tb-contacts">
-      <a href="tel:+254750400060" class="tb-link">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        +254 750 400 060
-      </a>
-      <div class="tb-divider"></div>
-      <a href="tel:+254706400060" class="tb-link">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        +254 706 400 060
-      </a>
-      <div class="tb-divider"></div>
-      <a href="mailto:harivarsteelcentre@gmail.com" class="tb-link">
-        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        harivarsteelcentre@gmail.com
-      </a>
-      <div class="tb-divider"></div>
-      <a href="https://wa.me/254750400060" target="_blank" class="tb-link wa">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.285 7.04L.785 23.5l4.59-1.478A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.368l-.36-.214-3.716 1.197 1.188-3.618-.235-.372A9.818 9.818 0 1112 21.818z"/></svg>
-        WhatsApp
-      </a>
+      <a href="tel:+254750400060" class="tb-link">+254 750 400 060</a>
+      <a href="tel:+254706400060" class="tb-link">+254 706 400 060</a>
+      <a href="mailto:harivarsteelcentre@gmail.com" class="tb-link">harivarsteelcentre@gmail.com</a>
+      <a href="https://wa.me/254750400060" target="_blank" class="tb-link">WhatsApp</a>
     </div>
     <div class="tb-socials">
       <a href="https://facebook.com/harivarsteelcentre" target="_blank" class="tb-soc">
@@ -292,24 +698,22 @@ footer{background:var(--navy2);padding:clamp(48px,6vw,72px) 5vw 0;}
 <header id="header">
   <div class="header-inner">
     <a href="#" class="logo">
-      <div class="logo-icon">
-        <svg viewBox="0 0 28 28"><rect x="2" y="11" width="24" height="6" rx="1"/><rect x="2" y="4" width="9" height="5" rx=".5"/><rect x="2" y="19" width="9" height="5" rx=".5"/><rect x="17" y="4" width="9" height="5" rx=".5"/><rect x="17" y="19" width="9" height="5" rx=".5"/></svg>
-      </div>
-      <div class="logo-text">
-        <div class="logo-name">HARIVAR STEEL CENTRE LTD</div>
-        <div class="logo-tagline">THIKA &middot; NAIROBI, KENYA</div>
+      <div class="logo-badge"></div>
+      <div>
+        <div class="logo-name">Harivar Steel Centre Ltd</div>
+        <div class="logo-sub">Thika &middot; Nairobi, Kenya</div>
       </div>
     </a>
     <nav class="main-nav">
-      <a href="#" class="active">HOME</a>
-      <a href="#services">SERVICES</a>
-      <a href="#about">ABOUT US</a>
-      <a href="#gallery">GALLERY</a>
-      <a href="#contact">CONTACT</a>
+      <a href="#" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About Us</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <div class="header-cta">
-      <a href="tel:+254750400060" class="btn btn-outline">CALL NOW</a>
-      <a href="#contact" class="btn btn-primary">GET A QUOTE</a>
+    <div class="header-right">
+      <a href="tel:+254750400060" class="btn btn-outline">Call Now</a>
+      <a href="#contact" class="btn btn-solid">Get a Quote</a>
       <button class="hamburger" onclick="openNav()">
         <span></span><span></span><span></span>
       </button>
@@ -318,44 +722,47 @@ footer{background:var(--navy2);padding:clamp(48px,6vw,72px) 5vw 0;}
 </header>
 
 <!-- HERO -->
-<section class="hero">
-  <img class="hero-img" src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600&q=85" alt="Cement and steel transport Kenya">
+<section class="hero" id="hero">
+  <div class="slide active"></div>
+  <div class="slide"></div>
+  <div class="slide"></div>
+  <div class="slide"></div>
+  <div class="slide"></div>
+  <div class="slide"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-left">
-      <div class="hero-flag">
-        <div class="hero-flag-bar"></div>
-        <span>KENYA'S TRUSTED LOGISTICS PARTNER</span>
-      </div>
-      <h1>CEMENT &amp;<br><span>STEEL TRANSPORT</span></h1>
-      <div class="hero-sub-line">ACROSS ALL 47 COUNTIES</div>
+      <div class="hero-rule"></div>
+      <h1>Cement &amp; <em>Steel</em><br>Transport</h1>
+      <div class="hero-sub">Across All 47 Counties</div>
       <p class="hero-desc">Reliable, on-time delivery of cement and steel to construction sites nationwide. Built on trust, driven by commitment — for over a decade.</p>
       <div class="hero-btns">
-        <a href="#services" class="btn btn-hero-p">OUR SERVICES</a>
-        <button class="btn-hero-o" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">CONTACT US</button>
+        <a href="#services" class="btn-hero-gold">Our Services</a>
+        <button class="btn-hero-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Us</button>
       </div>
     </div>
-    <div class="hero-right">
-      <div class="hstat"><div class="hstat-n">10+</div><div class="hstat-l">YEARS IN SERVICE</div></div>
-      <div class="hstat"><div class="hstat-n">47</div><div class="hstat-l">COUNTIES SERVED</div></div>
-      <div class="hstat"><div class="hstat-n">100%</div><div class="hstat-l">INSURED CARGO</div></div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-n">10+</div><div class="hstat-l">Years in Service</div></div>
+      <div class="hstat"><div class="hstat-n">47</div><div class="hstat-l">Counties Served</div></div>
+      <div class="hstat"><div class="hstat-n">100%</div><div class="hstat-l">Insured Cargo</div></div>
     </div>
   </div>
+  <div class="hero-dots" id="heroDots"></div>
 </section>
 
 <!-- STRIP -->
 <div class="strip">
   <div class="strip-item">
-    <div class="si-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M8 7V5h8v2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/><path d="M2 14h20"/></svg></div>
-    <div class="si-text"><h3>CEMENT TRANSPORT</h3><p>Bagged &amp; bulk cement delivery across Kenya</p></div>
+    <h3>Cement Transport</h3>
+    <p>Bagged &amp; bulk cement delivered safely across Kenya</p>
   </div>
   <div class="strip-item">
-    <div class="si-icon"><svg viewBox="0 0 24 24"><path d="M4 8h16M4 12h16M4 16h10"/><rect x="2" y="4" width="20" height="16" rx="1"/></svg></div>
-    <div class="si-text"><h3>STEEL DELIVERY</h3><p>Structural steel, rebar &amp; roofing materials</p></div>
+    <h3>Steel Delivery</h3>
+    <p>Structural steel, rebar &amp; roofing materials</p>
   </div>
   <div class="strip-item">
-    <div class="si-icon"><svg viewBox="0 0 24 24"><path d="M3 6l9-4 9 4v6c0 5-9 9-9 9S3 17 3 12V6z"/></svg></div>
-    <div class="si-text"><h3>BULK LOGISTICS</h3><p>Large-scale industrial haulage &amp; fleet management</p></div>
+    <h3>Bulk Logistics</h3>
+    <p>Large-scale industrial haulage &amp; fleet management</p>
   </div>
 </div>
 
@@ -363,27 +770,33 @@ footer{background:var(--navy2);padding:clamp(48px,6vw,72px) 5vw 0;}
 <section class="about" id="about">
   <div class="about-inner">
     <div>
-      <div class="section-label">ABOUT US</div>
-      <h2 class="section-h">WE DON'T JUST TRANSPORT<br><span>CEMENT — WE TRANSPORT TRUST</span></h2>
-      <p class="section-body">Harivar Steel Centre Ltd is a leading logistics company based in Thika, specialising in the safe and timely transport of cement and steel construction materials across Kenya. With over a decade of experience, we are the partner construction companies depend on.</p>
+      <div class="sec-label">About Us</div>
+      <h2 class="sec-h">We Don't Just Transport Cement —<br><em>We Transport Trust</em></h2>
+      <p class="sec-body">Harivar Steel Centre Ltd is a leading logistics company based in Thika, specialising in the safe and timely transport of cement and steel construction materials across Kenya. With over a decade of experience, we are the partner construction companies depend on.</p>
       <div class="checklist">
-        <div class="check-item">
-          <div class="check-dot"></div>
-          <div><strong>NATIONWIDE COVERAGE</strong><p>Delivering across all 47 counties — from Mombasa to Kisumu.</p></div>
+        <div class="ch">
+          <div class="ch-line"></div>
+          <div><strong>Nationwide Coverage</strong><p>Delivering across all 47 counties — from Mombasa to Kisumu.</p></div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"></div>
-          <div><strong>CERTIFIED &amp; INSURED</strong><p>Road-certified fleet with full cargo insurance for complete peace of mind.</p></div>
+        <div class="ch">
+          <div class="ch-line"></div>
+          <div><strong>Certified &amp; Insured</strong><p>Road-certified fleet with full cargo insurance for complete peace of mind.</p></div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"></div>
-          <div><strong>ON-TIME DELIVERY</strong><p>We understand construction timelines — zero-delay delivery is our promise.</p></div>
+        <div class="ch">
+          <div class="ch-line"></div>
+          <div><strong>On-Time Delivery</strong><p>We understand construction timelines — zero-delay delivery is our promise.</p></div>
         </div>
       </div>
     </div>
-    <div class="about-img-wrap">
-      <img class="about-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85" alt="Harivar logistics fleet" onerror="this.style.background='var(--light)'">
-      <div class="about-tag"><div class="big">10+</div><div class="sm">YEARS TRUSTED</div></div>
+    <div class="about-img-block">
+      <img class="about-img"
+        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=90"
+        alt="Harivar logistics operations"
+        onerror="this.style.background='var(--light)'">
+      <div class="about-badge">
+        <div class="big">10+</div>
+        <div class="sm">Years Trusted</div>
+      </div>
     </div>
   </div>
 </section>
@@ -391,31 +804,26 @@ footer{background:var(--navy2);padding:clamp(48px,6vw,72px) 5vw 0;}
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="services-inner">
-    <div class="section-header">
-      <div class="section-label">WHAT WE OFFER</div>
-      <h2 class="section-h">CONSTRUCTION LOGISTICS<br><span>BUILT FOR KENYA</span></h2>
-    </div>
+    <div class="sec-label">What We Offer</div>
+    <h2 class="sec-h">Construction Logistics<br><em>Built for Kenya</em></h2>
     <div class="svc-grid">
-      <div class="svc-card">
-        <div class="svc-num">01</div>
-        <div class="svc-icon-box"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M8 7V5h8v2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/><path d="M2 14h20"/></svg></div>
+      <div class="svc">
+        <div class="svc-n">01</div>
         <h3>Cement Transport</h3>
         <p>Weather-protected, safe delivery of bagged and bulk cement to construction sites on time, every time.</p>
-        <div class="svc-more">LEARN MORE</div>
+        <div class="svc-more">Learn More</div>
       </div>
-      <div class="svc-card">
-        <div class="svc-num">02</div>
-        <div class="svc-icon-box"><svg viewBox="0 0 24 24"><path d="M4 8h16M4 12h16M4 16h10"/><rect x="2" y="4" width="20" height="16" rx="1"/></svg></div>
+      <div class="svc">
+        <div class="svc-n">02</div>
         <h3>Steel Delivery</h3>
         <p>Specialised transport of structural steel, rebar, and roofing materials with secure load management.</p>
-        <div class="svc-more">LEARN MORE</div>
+        <div class="svc-more">Learn More</div>
       </div>
-      <div class="svc-card">
-        <div class="svc-num">03</div>
-        <div class="svc-icon-box"><svg viewBox="0 0 24 24"><path d="M3 6l9-4 9 4v6c0 5-9 9-9 9S3 17 3 12V6z"/></svg></div>
+      <div class="svc">
+        <div class="svc-n">03</div>
         <h3>Bulk Logistics</h3>
         <p>High-volume industrial haulage tailored for large projects, fleet-managed with real-time coordination.</p>
-        <div class="svc-more">LEARN MORE</div>
+        <div class="svc-more">Learn More</div>
       </div>
     </div>
   </div>
@@ -425,30 +833,26 @@ footer{background:var(--navy2);padding:clamp(48px,6vw,72px) 5vw 0;}
 <section class="why">
   <div class="why-inner">
     <div class="why-left">
-      <div class="section-label">WHY CHOOSE US</div>
-      <h2 class="section-h">TRUSTED BY KENYA'S<br><span style="color:var(--sky);">CONSTRUCTION INDUSTRY</span></h2>
-      <p class="section-body">From small residential builds to large infrastructure projects, Harivar Steel Centre delivers with the professionalism and reliability you expect.</p>
-      <a href="#contact" class="btn btn-primary" style="margin-top:8px;">GET IN TOUCH</a>
+      <div class="sec-label">Why Choose Us</div>
+      <h2 class="sec-h">Trusted by Kenya's<br><em>Construction Industry</em></h2>
+      <p class="sec-body">From small residential builds to large infrastructure projects, Harivar Steel Centre delivers with the professionalism and reliability you expect.</p>
+      <a href="#contact" class="btn btn-solid" style="margin-top:8px;">Get in Touch</a>
     </div>
     <div class="why-grid">
       <div class="why-card">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <h4>FULLY INSURED</h4>
+        <h4>Fully Insured</h4>
         <p>Every load is fully covered. Your cargo is protected from pickup to delivery.</p>
       </div>
       <div class="why-card">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <h4>ON-TIME GUARANTEE</h4>
+        <h4>On-Time Guarantee</h4>
         <p>Construction schedules don't wait. Neither do we. Delivery when promised.</p>
       </div>
       <div class="why-card">
-        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <h4>NATIONWIDE REACH</h4>
+        <h4>Nationwide Reach</h4>
         <p>Fleet operations covering all 47 counties across Kenya.</p>
       </div>
       <div class="why-card">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-        <h4>EXPERIENCED TEAM</h4>
+        <h4>Experienced Team</h4>
         <p>Over 10 years of logistics expertise with a professional, dedicated crew.</p>
       </div>
     </div>
@@ -458,23 +862,32 @@ footer{background:var(--navy2);padding:clamp(48px,6vw,72px) 5vw 0;}
 <!-- GALLERY -->
 <section class="gallery" id="gallery">
   <div class="gallery-inner">
-    <div class="section-label">GALLERY</div>
-    <h2 class="section-h">OUR FLEET &amp; <span>OPERATIONS</span></h2>
+    <div class="sec-label">Gallery</div>
+    <h2 class="sec-h">Our Fleet &amp; <em>Operations</em></h2>
     <div class="gal-grid">
       <div class="gal-item">
-        <img src="2.jpeg" alt="Fleet operations" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="gal-ph" style="display:none"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M8 7V5h8v2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg><span>FLEET PHOTO</span></div>
-        <div class="gal-over"><span>CEMENT TRANSPORT</span></div>
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=85" alt="Construction site delivery">
+        <div class="gal-cap"><span>Cement Transport</span></div>
       </div>
       <div class="gal-item">
-        <img src="3.jpeg" alt="Steel delivery" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="gal-ph" style="display:none"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M8 7V5h8v2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg><span>FLEET PHOTO</span></div>
-        <div class="gal-over"><span>STEEL DELIVERY</span></div>
+        <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=700&q=85" alt="Steel transport truck">
+        <div class="gal-cap"><span>Steel Delivery</span></div>
       </div>
       <div class="gal-item">
-        <img src="4.jpeg" alt="Bulk logistics" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="gal-ph" style="display:none"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M8 7V5h8v2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg><span>FLEET PHOTO</span></div>
-        <div class="gal-over"><span>BULK LOGISTICS</span></div>
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85" alt="Logistics fleet">
+        <div class="gal-cap"><span>Fleet Operations</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=700&q=85" alt="Construction project">
+        <div class="gal-cap"><span>Building Projects</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1565008576549-57569a49371d?w=700&q=85" alt="Industrial haulage">
+        <div class="gal-cap"><span>Bulk Logistics</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=700&q=85" alt="Nationwide coverage">
+        <div class="gal-cap"><span>Nationwide Delivery</span></div>
       </div>
     </div>
   </div>
@@ -484,52 +897,50 @@ footer{background:var(--navy2);padding:clamp(48px,6vw,72px) 5vw 0;}
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div>
-      <div class="section-label">GET IN TOUCH</div>
-      <h2 class="section-h">CONTACT <span>US</span></h2>
-      <div class="contact-cards">
-        <div class="c-card">
-          <div class="c-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><div class="c-lbl">LOCATION</div><div class="c-val">Garissa Road, Thika<br>Nairobi, Kenya</div></div>
+      <div class="sec-label">Get in Touch</div>
+      <h2 class="sec-h">Contact <em>Us</em></h2>
+      <div class="c-list">
+        <div class="c-row">
+          <div class="c-lbl">Location</div>
+          <div class="c-val">Garissa Road, Thika — Nairobi, Kenya</div>
         </div>
-        <div class="c-card">
-          <div class="c-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-          <div><div class="c-lbl">PHONE</div><div class="c-val"><a href="tel:+254750400060">+254 750 400 060</a><br><a href="tel:+254706400060">+254 706 400 060</a></div></div>
-        </div>
-        <div class="c-card">
-          <div class="c-ico wa">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.285 7.04L.785 23.5l4.59-1.478A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.368l-.36-.214-3.716 1.197 1.188-3.618-.235-.372A9.818 9.818 0 1112 21.818z"/></svg>
+        <div class="c-row">
+          <div class="c-lbl">Phone</div>
+          <div class="c-val">
+            <a href="tel:+254750400060">+254 750 400 060</a><br>
+            <a href="tel:+254706400060">+254 706 400 060</a>
           </div>
-          <div><div class="c-lbl wa">WHATSAPP</div><div class="c-val"><a href="https://wa.me/254750400060" target="_blank">Chat on WhatsApp</a></div></div>
         </div>
-        <div class="c-card">
-          <div class="c-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="c-lbl">EMAIL</div><div class="c-val"><a href="mailto:harivarsteelcentre@gmail.com">harivarsteelcentre@gmail.com</a></div></div>
+        <div class="c-row">
+          <div class="c-lbl">WhatsApp</div>
+          <div class="c-val wa"><a href="https://wa.me/254750400060" target="_blank">Chat on WhatsApp</a></div>
         </div>
-        <div class="c-card">
-          <div class="c-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div><div class="c-lbl">HOURS</div><div class="c-val">Monday &ndash; Saturday: 08:00 &ndash; 18:00</div></div>
+        <div class="c-row">
+          <div class="c-lbl">Email</div>
+          <div class="c-val"><a href="mailto:harivarsteelcentre@gmail.com">harivarsteelcentre@gmail.com</a></div>
+        </div>
+        <div class="c-row">
+          <div class="c-lbl">Office Hours</div>
+          <div class="c-val">Monday – Saturday: 08:00 – 18:00</div>
         </div>
       </div>
     </div>
-    <div class="map-box">
+    <div class="map-wrap">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0!2d37.0832!3d-1.0395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4be027f2b0e3%3A0x1b0f40c9a2a41da0!2sGarissa%20Rd%2C%20Thika!5e0!3m2!1sen!2ske!4v1748000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="map-label">
-        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span>GARISSA ROAD, THIKA &middot; NAIROBI, KENYA</span>
-      </div>
+      <div class="map-foot">Garissa Road, Thika &mdash; Nairobi, Kenya</div>
     </div>
   </div>
 </section>
 
 <!-- BANNER -->
 <div class="banner">
-  <div>
+  <div class="banner-left">
     <h3>Ready to Transport Your Next Shipment?</h3>
     <p>Get in touch today for competitive rates and reliable service across Kenya.</p>
   </div>
   <div class="banner-btns">
-    <a href="tel:+254750400060" class="btn-nav">CALL US NOW</a>
-    <a href="mailto:harivarsteelcentre@gmail.com" class="btn-nav-o">SEND ENQUIRY</a>
+    <a href="tel:+254750400060" class="btn-bnav btn-bnav-dark">Call Us Now</a>
+    <a href="mailto:harivarsteelcentre@gmail.com" class="btn-bnav btn-bnav-out">Send Enquiry</a>
   </div>
 </div>
 
@@ -538,20 +949,20 @@ footer{background:var(--navy2);padding:clamp(48px,6vw,72px) 5vw 0;}
   <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo-name">HARIVAR STEEL CENTRE LTD</div>
-        <div class="logo-tagline">THIKA &middot; NAIROBI, KENYA</div>
+        <div class="flogo">Harivar Steel Centre Ltd</div>
+        <div class="flogo-sub">Thika &middot; Nairobi, Kenya</div>
         <p>Trusted logistics partner for cement and steel transport across Kenya. Building Kenya, one delivery at a time.</p>
       </div>
-      <div class="footer-col">
-        <h4>QUICK LINKS</h4>
+      <div class="fc">
+        <h4>Quick Links</h4>
         <a href="#">Home</a>
         <a href="#services">Services</a>
         <a href="#about">About Us</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </div>
-      <div class="footer-col">
-        <h4>CONTACT</h4>
+      <div class="fc">
+        <h4>Contact</h4>
         <a href="tel:+254750400060">+254 750 400 060</a>
         <a href="tel:+254706400060">+254 706 400 060</a>
         <a href="mailto:harivarsteelcentre@gmail.com">harivarsteelcentre@gmail.com</a>
@@ -564,15 +975,41 @@ footer{background:var(--navy2);padding:clamp(48px,6vw,72px) 5vw 0;}
     </div>
   </div>
 </footer>
-<div class="gold-bar"></div>
+<div class="gold-rule"></div>
 
 <script>
-function openNav(){document.getElementById('mobNav').classList.add('open');document.body.style.overflow='hidden';}
-function closeNav(){document.getElementById('mobNav').classList.remove('open');document.body.style.overflow='';}
+// ─── Slideshow ───────────────────────────
+const slides = document.querySelectorAll('.slide');
+const dotsEl  = document.getElementById('heroDots');
+let cur = 0, timer;
+
+slides.forEach((_,i) => {
+  const d = document.createElement('button');
+  d.className = 'dot' + (i===0?' active':'');
+  d.onclick = () => goTo(i);
+  dotsEl.appendChild(d);
+});
+
+function goTo(n){
+  slides[cur].classList.remove('active');
+  dotsEl.children[cur].classList.remove('active');
+  cur = (n + slides.length) % slides.length;
+  slides[cur].classList.add('active');
+  dotsEl.children[cur].classList.add('active');
+  clearInterval(timer);
+  timer = setInterval(next, 5000);
+}
+function next(){ goTo(cur+1); }
+timer = setInterval(next, 5000);
+
+// ─── Nav ──────────────────────────────────
+function openNav(){ document.getElementById('mobNav').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeNav(){ document.getElementById('mobNav').classList.remove('open'); document.body.style.overflow=''; }
+
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t){e.preventDefault();closeNav();t.scrollIntoView({behavior:'smooth'});}
+  a.addEventListener('click', e=>{
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); closeNav(); t.scrollIntoView({behavior:'smooth'}); }
   });
 });
 </script>
