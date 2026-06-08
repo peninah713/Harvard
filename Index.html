@@ -57,8 +57,6 @@ a { text-decoration: none; color: inherit; }
 .tb-soc {
   width: 36px; height: 42px;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'EB Garamond', serif;
-  font-size: 11px; letter-spacing: .1em;
   color: rgba(255,255,255,.4);
   transition: color .2s;
 }
@@ -129,10 +127,7 @@ a { text-decoration: none; color: inherit; }
   display: none; flex-direction: column; gap: 5px;
   background: none; border: none; cursor: pointer; padding: 4px;
 }
-.hamburger span {
-  width: 24px; height: 2px; background: var(--navy);
-  display: block; transition: all .25s;
-}
+.hamburger span { width: 24px; height: 2px; background: var(--navy); display: block; }
 
 /* MOBILE NAV */
 .mob-nav {
@@ -141,35 +136,12 @@ a { text-decoration: none; color: inherit; }
   flex-direction: column; padding: 28px 32px;
 }
 .mob-nav.open { display: flex; }
-.mob-top {
-  display: flex; justify-content: space-between;
-  align-items: center; margin-bottom: 48px;
-}
-.mob-brand {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px; font-weight: 700; color: #fff; letter-spacing: .06em;
-}
-.mob-close {
-  background: none; border: none;
-  color: rgba(255,255,255,.6); font-size: 32px;
-  cursor: pointer; line-height: 1; font-family: serif;
-}
-.mob-nav a {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 30px; font-weight: 600;
-  letter-spacing: .06em;
-  color: rgba(255,255,255,.65);
-  border-bottom: 1px solid rgba(255,255,255,.07);
-  padding: 18px 0;
-  transition: color .2s;
-}
+.mob-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 48px; }
+.mob-brand { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #fff; letter-spacing: .06em; }
+.mob-close { background: none; border: none; color: rgba(255,255,255,.6); font-size: 32px; cursor: pointer; line-height: 1; font-family: serif; }
+.mob-nav a { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; letter-spacing: .06em; color: rgba(255,255,255,.65); border-bottom: 1px solid rgba(255,255,255,.07); padding: 18px 0; transition: color .2s; }
 .mob-nav a:hover { color: var(--gold3); }
-.mob-footer {
-  margin-top: auto;
-  font-family: 'EB Garamond', serif;
-  font-size: 13px; font-style: italic;
-  color: rgba(255,255,255,.3);
-}
+.mob-footer { margin-top: auto; font-family: 'EB Garamond', serif; font-size: 13px; font-style: italic; color: rgba(255,255,255,.3); }
 
 /* HERO SLIDESHOW */
 .hero {
@@ -184,497 +156,181 @@ a { text-decoration: none; color: inherit; }
 }
 .slide.active { opacity: 1; }
 
-/* CEMENT TRANSPORT HERO IMAGES */
+/* BULK CEMENT TANKER TRUCK IMAGES from Wikimedia Commons & open sources */
 .slide:nth-child(1){
-  background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=90');
-  background-position: center center;
+  background-image: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600&q=90');
 }
 .slide:nth-child(2){
-  background-image: url('https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=1600&q=90');
-  background-position: center center;
+  background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1600&q=90');
 }
 .slide:nth-child(3){
-  background-image: url('https://images.unsplash.com/photo-1567954970774-58d6aa6c50dc?w=1600&q=90');
-  background-position: center center;
+  background-image: url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1600&q=90');
 }
 .slide:nth-child(4){
   background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=90');
-  background-position: center center;
 }
 .slide:nth-child(5){
-  background-image: url('https://images.unsplash.com/photo-1590778580924-37e9a57bc2cd?w=1600&q=90');
-  background-position: center center;
+  background-image: url('https://images.unsplash.com/photo-1562516710-56a04be5a2ab?w=1600&q=90');
 }
 .slide:nth-child(6){
-  background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&q=90');
-  background-position: center center;
+  background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=90');
 }
 
 .hero-overlay {
   position: absolute; inset: 0; z-index: 2;
-  background: linear-gradient(105deg,
-    rgba(8,17,30,.82) 0%,
-    rgba(12,32,65,.65) 50%,
-    rgba(8,17,30,.25) 100%);
+  background: linear-gradient(105deg, rgba(8,17,30,.82) 0%, rgba(12,32,65,.65) 50%, rgba(8,17,30,.25) 100%);
 }
 .hero-content {
-  position: relative; z-index: 3;
-  height: 100%;
-  max-width: 1400px; margin: 0 auto;
-  padding: 0 5vw;
-  display: flex; align-items: flex-end;
-  justify-content: space-between; gap: 40px;
-  padding-bottom: clamp(48px, 7vw, 90px);
-  flex-wrap: wrap;
+  position: relative; z-index: 3; height: 100%;
+  max-width: 1400px; margin: 0 auto; padding: 0 5vw;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;
+  padding-bottom: clamp(48px, 7vw, 90px); flex-wrap: wrap;
 }
 .hero-left { max-width: 640px; }
-.hero-rule {
-  width: 60px; height: 3px;
-  background: var(--gold3);
-  margin-bottom: 24px;
-}
-.hero h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(46px, 7vw, 88px);
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.0;
-  letter-spacing: .01em;
-  margin-bottom: 12px;
-}
+.hero-rule { width: 60px; height: 3px; background: var(--gold3); margin-bottom: 24px; }
+.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(46px, 7vw, 88px); font-weight: 700; color: #fff; line-height: 1.0; letter-spacing: .01em; margin-bottom: 12px; }
 .hero h1 em { font-style: italic; color: var(--gold3); }
-.hero-sub {
-  font-family: 'EB Garamond', serif;
-  font-size: clamp(16px, 2vw, 22px);
-  font-style: italic;
-  color: rgba(255,255,255,.6);
-  letter-spacing: .06em;
-  margin-bottom: 28px;
-}
-.hero-desc {
-  font-size: 16px;
-  font-weight: 400;
-  color: rgba(255,255,255,.55);
-  line-height: 1.9;
-  max-width: 500px;
-  margin-bottom: 36px;
-}
+.hero-sub { font-family: 'EB Garamond', serif; font-size: clamp(16px, 2vw, 22px); font-style: italic; color: rgba(255,255,255,.6); letter-spacing: .06em; margin-bottom: 28px; }
+.hero-desc { font-size: 16px; font-weight: 400; color: rgba(255,255,255,.55); line-height: 1.9; max-width: 500px; margin-bottom: 36px; }
 .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-.btn-hero-gold {
-  background: var(--gold2); color: var(--navy);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 14px; font-weight: 700;
-  letter-spacing: .12em;
-  padding: 14px 32px;
-  border: none; cursor: pointer; transition: all .2s;
-}
+.btn-hero-gold { background: var(--gold2); color: var(--navy); font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 700; letter-spacing: .12em; padding: 14px 32px; border: none; cursor: pointer; transition: all .2s; }
 .btn-hero-gold:hover { background: var(--gold3); }
-.btn-hero-ghost {
-  background: transparent; color: #fff;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 14px; font-weight: 600;
-  letter-spacing: .12em;
-  padding: 13px 30px;
-  border: 1.5px solid rgba(255,255,255,.35);
-  cursor: pointer; transition: all .2s;
-}
+.btn-hero-ghost { background: transparent; color: #fff; font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 600; letter-spacing: .12em; padding: 13px 30px; border: 1.5px solid rgba(255,255,255,.35); cursor: pointer; transition: all .2s; }
 .btn-hero-ghost:hover { border-color: #fff; background: rgba(255,255,255,.07); }
 
-/* Stat panel */
-.hero-stats {
-  display: flex; flex-direction: column;
-  border-left: 3px solid var(--gold2);
-  flex-shrink: 0;
-}
+.hero-stats { display: flex; flex-direction: column; border-left: 3px solid var(--gold2); flex-shrink: 0; }
 .hstat { padding: 20px 32px; border-bottom: 1px solid rgba(255,255,255,.1); }
 .hstat:last-child { border-bottom: none; }
-.hstat-n {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 50px; font-weight: 700;
-  color: #fff; line-height: 1;
-}
-.hstat-l {
-  font-family: 'EB Garamond', serif;
-  font-size: 11px; font-style: italic;
-  letter-spacing: .18em;
-  color: rgba(255,255,255,.4);
-  margin-top: 4px;
-}
+.hstat-n { font-family: 'Cormorant Garamond', serif; font-size: 50px; font-weight: 700; color: #fff; line-height: 1; }
+.hstat-l { font-family: 'EB Garamond', serif; font-size: 11px; font-style: italic; letter-spacing: .18em; color: rgba(255,255,255,.4); margin-top: 4px; }
 
-/* Slide dots */
-.hero-dots {
-  position: absolute; bottom: 20px; left: 50%;
-  transform: translateX(-50%);
-  z-index: 4; display: flex; gap: 8px;
-}
-.dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: rgba(255,255,255,.35);
-  cursor: pointer; transition: all .3s;
-  border: none;
-}
+.hero-dots { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 4; display: flex; gap: 8px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.35); cursor: pointer; transition: all .3s; border: none; }
 .dot.active { background: var(--gold3); transform: scale(1.3); }
 
-/* BLUE STRIP */
-.strip {
-  background: var(--blue);
-  display: grid; grid-template-columns: repeat(3,1fr);
-}
+/* STRIP */
+.strip { background: var(--blue); display: grid; grid-template-columns: repeat(3,1fr); }
 @media(max-width:640px){ .strip{ grid-template-columns:1fr; } }
-.strip-item {
-  padding: clamp(20px,3vw,36px) clamp(24px,3vw,40px);
-  border-right: 1px solid rgba(255,255,255,.15);
-  transition: background .2s;
-}
+.strip-item { padding: clamp(20px,3vw,36px) clamp(24px,3vw,40px); border-right: 1px solid rgba(255,255,255,.15); transition: background .2s; }
 .strip-item:last-child { border-right: none; }
-@media(max-width:640px){
-  .strip-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.12); }
-  .strip-item:last-child { border-bottom: none; }
-}
 .strip-item:hover { background: var(--blue2); }
-.strip-item h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px; font-weight: 700;
-  color: #fff; letter-spacing: .06em;
-  margin-bottom: 6px;
-}
-.strip-item p {
-  font-size: 14px; color: rgba(255,255,255,.65);
-  line-height: 1.7;
-}
+.strip-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #fff; letter-spacing: .06em; margin-bottom: 6px; }
+.strip-item p { font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.7; }
 
 /* ABOUT */
 .about { background: #fff; padding: clamp(64px,8vw,100px) 5vw; }
-.about-inner {
-  max-width: 1400px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: clamp(40px,6vw,96px); align-items: center;
-}
+.about-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px,6vw,96px); align-items: center; }
 @media(max-width:860px){ .about-inner{ grid-template-columns:1fr; } }
-.sec-label {
-  font-family: 'EB Garamond', serif;
-  font-size: 12px; font-style: italic;
-  letter-spacing: .24em; color: var(--gold);
-  display: flex; align-items: center; gap: 12px;
-  margin-bottom: 16px;
-}
+.sec-label { font-family: 'EB Garamond', serif; font-size: 12px; font-style: italic; letter-spacing: .24em; color: var(--gold); display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
 .sec-label::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
-.sec-h {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 3.5vw, 46px);
-  font-weight: 700;
-  color: var(--navy); line-height: 1.1;
-  letter-spacing: .01em; margin-bottom: 18px;
-}
+.sec-h { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 46px); font-weight: 700; color: var(--navy); line-height: 1.1; letter-spacing: .01em; margin-bottom: 18px; }
 .sec-h em { font-style: italic; color: var(--blue); }
-.sec-body {
-  font-size: 16px; color: var(--muted);
-  line-height: 1.95; font-weight: 400;
-  margin-bottom: 32px;
-}
+.sec-body { font-size: 16px; color: var(--muted); line-height: 1.95; font-weight: 400; margin-bottom: 32px; }
 .checklist { border-top: 1px solid var(--border); }
-.ch {
-  display: flex; gap: 16px;
-  padding: 18px 0; border-bottom: 1px solid var(--border);
-}
-.ch-line {
-  width: 2px; background: var(--gold2);
-  flex-shrink: 0; margin-top: 3px;
-}
-.ch strong {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 15px; font-weight: 700;
-  letter-spacing: .06em; color: var(--navy);
-  display: block; margin-bottom: 4px;
-}
+.ch { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--border); }
+.ch-line { width: 2px; background: var(--gold2); flex-shrink: 0; margin-top: 3px; }
+.ch strong { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 700; letter-spacing: .06em; color: var(--navy); display: block; margin-bottom: 4px; }
 .ch p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 .about-img-block { position: relative; }
-.about-img {
-  width: 100%;
-  height: clamp(320px, 42vw, 500px);
-  object-fit: cover;
-  display: block;
-}
-.about-badge {
-  position: absolute; bottom: 0; left: 0;
-  background: var(--gold2); color: var(--navy);
-  padding: 22px 30px;
-}
-.about-badge .big {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 46px; font-weight: 700; line-height: 1;
-}
-.about-badge .sm {
-  font-family: 'EB Garamond', serif;
-  font-size: 11px; font-style: italic;
-  letter-spacing: .18em; margin-top: 4px;
-}
+.about-img { width: 100%; height: clamp(320px, 42vw, 500px); object-fit: cover; display: block; }
+.about-badge { position: absolute; bottom: 0; left: 0; background: var(--gold2); color: var(--navy); padding: 22px 30px; }
+.about-badge .big { font-family: 'Cormorant Garamond', serif; font-size: 46px; font-weight: 700; line-height: 1; }
+.about-badge .sm { font-family: 'EB Garamond', serif; font-size: 11px; font-style: italic; letter-spacing: .18em; margin-top: 4px; }
 
 /* SERVICES */
 .services { background: var(--off); padding: clamp(64px,8vw,100px) 5vw; }
 .services-inner { max-width: 1400px; margin: 0 auto; }
-.svc-grid {
-  display: grid; grid-template-columns: repeat(3,1fr);
-  gap: 2px; margin-top: 48px;
-}
+.svc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 48px; }
 @media(max-width:860px){ .svc-grid{ grid-template-columns: repeat(2,1fr); } }
 @media(max-width:560px){ .svc-grid{ grid-template-columns: 1fr; } }
-.svc {
-  background: #fff;
-  padding: clamp(28px,3vw,42px) clamp(24px,2.5vw,36px);
-  border-top: 3px solid transparent;
-  transition: border-color .25s, box-shadow .25s;
-}
-.svc:hover {
-  border-top-color: var(--gold2);
-  box-shadow: 0 10px 48px rgba(10,22,60,.07);
-}
-.svc-n {
-  font-family: 'EB Garamond', serif;
-  font-size: 11px; font-style: italic;
-  letter-spacing: .22em; color: var(--sky);
-  margin-bottom: 22px;
-}
-.svc h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px; font-weight: 700;
-  color: var(--navy); letter-spacing: .03em;
-  margin-bottom: 12px;
-}
+.svc { background: #fff; padding: clamp(28px,3vw,42px) clamp(24px,2.5vw,36px); border-top: 3px solid transparent; transition: border-color .25s, box-shadow .25s; }
+.svc:hover { border-top-color: var(--gold2); box-shadow: 0 10px 48px rgba(10,22,60,.07); }
+.svc-n { font-family: 'EB Garamond', serif; font-size: 11px; font-style: italic; letter-spacing: .22em; color: var(--sky); margin-bottom: 22px; }
+.svc h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: var(--navy); letter-spacing: .03em; margin-bottom: 12px; }
 .svc p { font-size: 15px; color: var(--muted); line-height: 1.85; }
-.svc-more {
-  margin-top: 24px;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 13px; font-weight: 600;
-  letter-spacing: .14em; color: var(--blue);
-  display: inline-flex; align-items: center; gap: 6px;
-  transition: gap .2s;
-}
+.svc-more { margin-top: 24px; font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 600; letter-spacing: .14em; color: var(--blue); display: inline-flex; align-items: center; gap: 6px; transition: gap .2s; }
 .svc:hover .svc-more { gap: 10px; }
 .svc-more::after { content: '→'; }
 
 /* WHY US */
 .why { background: var(--navy); padding: clamp(64px,8vw,100px) 5vw; }
-.why-inner {
-  max-width: 1400px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1.5fr;
-  gap: clamp(40px,6vw,80px); align-items: center;
-}
+.why-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr; gap: clamp(40px,6vw,80px); align-items: center; }
 @media(max-width:860px){ .why-inner{ grid-template-columns: 1fr; } }
 .why-left .sec-label { color: var(--gold3); }
 .why-left .sec-label::before { background: var(--gold3); }
 .why-left .sec-h { color: #fff; }
 .why-left .sec-h em { color: var(--sky); }
 .why-left .sec-body { color: rgba(255,255,255,.5); }
-.why-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 2px;
-}
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
 @media(max-width:480px){ .why-grid{ grid-template-columns: 1fr; } }
-.why-card {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.07);
-  padding: 32px 26px;
-  transition: background .2s;
-}
+.why-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); padding: 32px 26px; transition: background .2s; }
 .why-card:hover { background: rgba(255,255,255,.07); }
-.why-card h4 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px; font-weight: 700;
-  color: #fff; letter-spacing: .04em;
-  margin-bottom: 10px;
-}
-.why-card h4::before {
-  content: '—';
-  color: var(--gold2); margin-right: 8px;
-  font-style: italic;
-}
+.why-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #fff; letter-spacing: .04em; margin-bottom: 10px; }
+.why-card h4::before { content: '—'; color: var(--gold2); margin-right: 8px; font-style: italic; }
 .why-card p { font-size: 14px; color: rgba(255,255,255,.45); line-height: 1.75; }
 
 /* GALLERY */
 .gallery { background: #fff; padding: clamp(64px,8vw,100px) 5vw; }
 .gallery-inner { max-width: 1400px; margin: 0 auto; }
-.gal-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 260px;
-  gap: 8px;
-  margin-top: 48px;
-}
-@media(max-width:768px){
-  .gal-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 220px; }
-}
-@media(max-width:480px){
-  .gal-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
-}
-.gal-item {
-  overflow: hidden; position: relative;
-  background: var(--light);
-}
-.gal-item img {
-  width: 100%; height: 100%;
-  object-fit: cover; display: block;
-  transition: transform .6s ease;
-  filter: brightness(1.05) saturate(1.1);
-}
+.gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 260px; gap: 8px; margin-top: 48px; }
+@media(max-width:768px){ .gal-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 220px; } }
+@media(max-width:480px){ .gal-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; } }
+.gal-item { overflow: hidden; position: relative; background: var(--light); }
+.gal-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; filter: brightness(1.05) saturate(1.1); }
 .gal-item:hover img { transform: scale(1.07); }
-.gal-cap {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  background: linear-gradient(to top, rgba(8,17,30,.78) 0%, transparent 100%);
-  padding: 20px 18px 16px;
-  opacity: 0; transition: opacity .3s;
-}
+.gal-cap { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(8,17,30,.78) 0%, transparent 100%); padding: 20px 18px 16px; opacity: 0; transition: opacity .3s; }
 .gal-item:hover .gal-cap { opacity: 1; }
-.gal-cap span {
-  font-family: 'EB Garamond', serif;
-  font-size: 13px; font-style: italic;
-  letter-spacing: .16em; color: rgba(255,255,255,.9);
-}
+.gal-cap span { font-family: 'EB Garamond', serif; font-size: 13px; font-style: italic; letter-spacing: .16em; color: rgba(255,255,255,.9); }
 
 /* CONTACT */
 .contact { background: var(--off); padding: clamp(64px,8vw,100px) 5vw; }
-.contact-inner {
-  max-width: 1400px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1.1fr;
-  gap: clamp(32px,5vw,64px);
-}
+.contact-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px,5vw,64px); }
 @media(max-width:768px){ .contact-inner{ grid-template-columns: 1fr; } }
-.c-list {
-  border: 1px solid var(--border);
-  background: #fff; margin-top: 32px;
-}
-.c-row {
-  padding: 20px 24px;
-  border-bottom: 1px solid var(--border);
-  display: flex; flex-direction: column; gap: 4px;
-  transition: background .2s;
-}
+.c-list { border: 1px solid var(--border); background: #fff; margin-top: 32px; }
+.c-row { padding: 20px 24px; border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 4px; transition: background .2s; }
 .c-row:last-child { border-bottom: none; }
 .c-row:hover { background: var(--light); }
-.c-lbl {
-  font-family: 'EB Garamond', serif;
-  font-size: 11px; font-style: italic;
-  letter-spacing: .2em; color: var(--blue);
-}
-.c-val {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 17px; font-weight: 600;
-  color: var(--text); line-height: 1.5;
-}
+.c-lbl { font-family: 'EB Garamond', serif; font-size: 11px; font-style: italic; letter-spacing: .2em; color: var(--blue); }
+.c-val { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--text); line-height: 1.5; }
 .c-val a { color: inherit; transition: color .2s; }
 .c-val a:hover { color: var(--blue); }
 .c-val.wa a { color: #1a9e45; }
-.map-wrap {
-  border: 1px solid var(--border);
-  overflow: hidden; display: flex;
-  flex-direction: column; background: #fff;
-}
-.map-wrap iframe {
-  width: 100%; height: clamp(280px,32vw,380px);
-  border: none; display: block; filter: saturate(.85);
-}
-.map-foot {
-  background: var(--blue); padding: 14px 20px;
-  font-family: 'EB Garamond', serif;
-  font-size: 13px; font-style: italic;
-  letter-spacing: .1em; color: rgba(255,255,255,.8);
-}
+.map-wrap { border: 1px solid var(--border); overflow: hidden; display: flex; flex-direction: column; background: #fff; }
+.map-wrap iframe { width: 100%; height: clamp(280px,32vw,380px); border: none; display: block; filter: saturate(.85); }
+.map-foot { background: var(--blue); padding: 14px 20px; font-family: 'EB Garamond', serif; font-size: 13px; font-style: italic; letter-spacing: .1em; color: rgba(255,255,255,.8); }
 
 /* BANNER */
-.banner {
-  background: var(--gold2);
-  padding: clamp(48px,6vw,72px) 5vw;
-  display: flex; align-items: center;
-  justify-content: space-between;
-  gap: 28px; flex-wrap: wrap;
-}
-.banner-left h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(24px,3.5vw,38px);
-  font-weight: 700; color: var(--navy);
-  line-height: 1.2; margin-bottom: 6px;
-}
-.banner-left p {
-  font-size: 15px; color: rgba(10,17,30,.6);
-}
+.banner { background: var(--gold2); padding: clamp(48px,6vw,72px) 5vw; display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap; }
+.banner-left h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px,3.5vw,38px); font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 6px; }
+.banner-left p { font-size: 15px; color: rgba(10,17,30,.6); }
 .banner-btns { display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
-.btn-bnav {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 14px; font-weight: 700;
-  letter-spacing: .12em;
-  padding: 13px 30px; cursor: pointer;
-  border: none; transition: all .2s;
-}
+.btn-bnav { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 700; letter-spacing: .12em; padding: 13px 30px; cursor: pointer; border: none; transition: all .2s; }
 .btn-bnav-dark { background: var(--navy); color: #fff; }
 .btn-bnav-dark:hover { background: var(--navy2); }
-.btn-bnav-out {
-  background: transparent; color: var(--navy);
-  border: 2px solid rgba(10,17,30,.3);
-}
+.btn-bnav-out { background: transparent; color: var(--navy); border: 2px solid rgba(10,17,30,.3); }
 .btn-bnav-out:hover { border-color: var(--navy); }
 
 /* FOOTER */
 footer { background: var(--navy2); padding: clamp(48px,6vw,72px) 5vw 0; }
 .footer-inner { max-width: 1400px; margin: 0 auto; }
-.footer-grid {
-  display: grid; grid-template-columns: 2fr 1fr 1fr;
-  gap: clamp(24px,4vw,64px);
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255,255,255,.07);
-}
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: clamp(24px,4vw,64px); padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.07); }
 @media(max-width:768px){ .footer-grid{ grid-template-columns: 1fr 1fr; } }
 @media(max-width:480px){ .footer-grid{ grid-template-columns: 1fr; } }
-.footer-brand .flogo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px; font-weight: 700;
-  color: #fff; letter-spacing: .05em;
-}
-.footer-brand .flogo-sub {
-  font-family: 'EB Garamond', serif;
-  font-size: 12px; font-style: italic;
-  color: var(--sky); margin-top: 3px; letter-spacing: .1em;
-}
-.footer-brand p {
-  font-size: 13.5px; color: rgba(255,255,255,.38);
-  line-height: 1.9; margin-top: 16px; max-width: 260px;
-}
-.fc h4 {
-  font-family: 'EB Garamond', serif;
-  font-size: 11px; font-style: italic;
-  letter-spacing: .2em; color: var(--sky);
-  margin-bottom: 18px;
-}
-.fc a {
-  display: block; font-size: 14px;
-  color: rgba(255,255,255,.45);
-  line-height: 2.4; transition: color .18s;
-}
+.footer-brand .flogo { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #fff; letter-spacing: .05em; }
+.footer-brand .flogo-sub { font-family: 'EB Garamond', serif; font-size: 12px; font-style: italic; color: var(--sky); margin-top: 3px; letter-spacing: .1em; }
+.footer-brand p { font-size: 13.5px; color: rgba(255,255,255,.38); line-height: 1.9; margin-top: 16px; max-width: 260px; }
+.fc h4 { font-family: 'EB Garamond', serif; font-size: 11px; font-style: italic; letter-spacing: .2em; color: var(--sky); margin-bottom: 18px; }
+.fc a { display: block; font-size: 14px; color: rgba(255,255,255,.45); line-height: 2.4; transition: color .18s; }
 .fc a:hover { color: #fff; }
-.footer-bottom {
-  max-width: 1400px; margin: 0 auto;
-  height: 52px; display: flex;
-  align-items: center; justify-content: space-between;
-  gap: 12px; flex-wrap: wrap;
-}
-.footer-bottom p {
-  font-size: 12px; color: rgba(255,255,255,.22);
-  letter-spacing: .06em;
-}
+.footer-bottom { max-width: 1400px; margin: 0 auto; height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.footer-bottom p { font-size: 12px; color: rgba(255,255,255,.22); letter-spacing: .06em; }
 .footer-bottom strong { color: rgba(255,255,255,.38); font-weight: 400; }
-.gold-rule {
-  height: 4px;
-  background: linear-gradient(90deg, var(--gold3), var(--gold), transparent);
-}
+.gold-rule { height: 4px; background: linear-gradient(90deg, var(--gold3), var(--gold), transparent); }
 
 /* RESPONSIVE */
-@media(max-width:960px){
-  .main-nav, .header-right .btn-outline { display: none; }
-  .hamburger { display: flex; }
-}
-@media(max-width:600px){
-  .hero-stats { display: none; }
-  .tb-contacts .tb-link:nth-child(n+3) { display: none; }
-}
+@media(max-width:960px){ .main-nav, .header-right .btn-outline { display: none; } .hamburger { display: flex; } }
+@media(max-width:640px){ .strip{ grid-template-columns:1fr; } .strip-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.12); } .strip-item:last-child { border-bottom: none; } }
+@media(max-width:600px){ .hero-stats { display: none; } .tb-contacts .tb-link:nth-child(n+3) { display: none; } }
 </style>
 </head>
 <body>
@@ -793,25 +449,15 @@ footer { background: var(--navy2); padding: clamp(48px,6vw,72px) 5vw 0; }
       <h2 class="sec-h">We Don't Just Transport Cement —<br><em>We Transport Trust</em></h2>
       <p class="sec-body">Harivar Steel Centre Ltd is a leading logistics company based in Thika, specialising in the safe and timely transport of cement and steel construction materials across Kenya. With over a decade of experience, we are the partner construction companies depend on.</p>
       <div class="checklist">
-        <div class="ch">
-          <div class="ch-line"></div>
-          <div><strong>Nationwide Coverage</strong><p>Delivering across all 47 counties — from Mombasa to Kisumu.</p></div>
-        </div>
-        <div class="ch">
-          <div class="ch-line"></div>
-          <div><strong>Certified &amp; Insured</strong><p>Road-certified fleet with full cargo insurance for complete peace of mind.</p></div>
-        </div>
-        <div class="ch">
-          <div class="ch-line"></div>
-          <div><strong>On-Time Delivery</strong><p>We understand construction timelines — zero-delay delivery is our promise.</p></div>
-        </div>
+        <div class="ch"><div class="ch-line"></div><div><strong>Nationwide Coverage</strong><p>Delivering across all 47 counties — from Mombasa to Kisumu.</p></div></div>
+        <div class="ch"><div class="ch-line"></div><div><strong>Certified &amp; Insured</strong><p>Road-certified fleet with full cargo insurance for complete peace of mind.</p></div></div>
+        <div class="ch"><div class="ch-line"></div><div><strong>On-Time Delivery</strong><p>We understand construction timelines — zero-delay delivery is our promise.</p></div></div>
       </div>
     </div>
     <div class="about-img-block">
-      <!-- About section: cement/construction delivery truck -->
       <img class="about-img"
-        src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=900&q=90"
-        alt="Harivar cement transport operations">
+        src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=90"
+        alt="Harivar bulk cement tanker truck">
       <div class="about-badge">
         <div class="big">10+</div>
         <div class="sm">Years Trusted</div>
@@ -858,67 +504,49 @@ footer { background: var(--navy2); padding: clamp(48px,6vw,72px) 5vw 0; }
       <a href="#contact" class="btn btn-solid" style="margin-top:8px;">Get in Touch</a>
     </div>
     <div class="why-grid">
-      <div class="why-card">
-        <h4>Fully Insured</h4>
-        <p>Every load is fully covered. Your cargo is protected from pickup to delivery.</p>
-      </div>
-      <div class="why-card">
-        <h4>On-Time Guarantee</h4>
-        <p>Construction schedules don't wait. Neither do we. Delivery when promised.</p>
-      </div>
-      <div class="why-card">
-        <h4>Nationwide Reach</h4>
-        <p>Fleet operations covering all 47 counties across Kenya.</p>
-      </div>
-      <div class="why-card">
-        <h4>Experienced Team</h4>
-        <p>Over 10 years of logistics expertise with a professional, dedicated crew.</p>
-      </div>
+      <div class="why-card"><h4>Fully Insured</h4><p>Every load is fully covered. Your cargo is protected from pickup to delivery.</p></div>
+      <div class="why-card"><h4>On-Time Guarantee</h4><p>Construction schedules don't wait. Neither do we. Delivery when promised.</p></div>
+      <div class="why-card"><h4>Nationwide Reach</h4><p>Fleet operations covering all 47 counties across Kenya.</p></div>
+      <div class="why-card"><h4>Experienced Team</h4><p>Over 10 years of logistics expertise with a professional, dedicated crew.</p></div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
+<!-- GALLERY — bulk cement tanker trucks throughout -->
 <section class="gallery" id="gallery">
   <div class="gallery-inner">
     <div class="sec-label">Gallery</div>
     <h2 class="sec-h">Our Fleet &amp; <em>Operations</em></h2>
     <div class="gal-grid">
 
-      <!-- 1: Cement bags stacked at warehouse -->
       <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85" alt="Cement bags stacked">
-        <div class="gal-cap"><span>Cement Bags</span></div>
+        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=700&q=85" alt="Bulk cement tanker truck">
+        <div class="gal-cap"><span>Bulk Cement Tanker</span></div>
       </div>
 
-      <!-- 2: Concrete mixer truck on road -->
       <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=700&q=85" alt="Cement mixer truck">
-        <div class="gal-cap"><span>Cement Transport</span></div>
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=85" alt="Cement transport truck on highway">
+        <div class="gal-cap"><span>Highway Transport</span></div>
       </div>
 
-      <!-- 3: Construction site with cement delivery -->
       <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=85" alt="Construction site delivery">
-        <div class="gal-cap"><span>Site Delivery</span></div>
+        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=700&q=85" alt="Semi-trailer cement truck">
+        <div class="gal-cap"><span>Semi-Trailer Fleet</span></div>
       </div>
 
-      <!-- 4: Heavy haulage truck on highway -->
       <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1590778580924-37e9a57bc2cd?w=700&q=85" alt="Bulk haulage truck">
-        <div class="gal-cap"><span>Bulk Haulage</span></div>
-      </div>
-
-      <!-- 5: Cement/construction materials loading -->
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1567954970774-58d6aa6c50dc?w=700&q=85" alt="Construction materials loading">
-        <div class="gal-cap"><span>Loading Operations</span></div>
-      </div>
-
-      <!-- 6: Construction logistics & fleet -->
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=700&q=85" alt="Construction logistics fleet">
+        <img src="https://images.unsplash.com/photo-1562516710-56a04be5a2ab?w=700&q=85" alt="Cement truck fleet operations">
         <div class="gal-cap"><span>Fleet Operations</span></div>
+      </div>
+
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=85" alt="Cement delivery truck">
+        <div class="gal-cap"><span>Cement Delivery</span></div>
+      </div>
+
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=85" alt="Construction materials haulage">
+        <div class="gal-cap"><span>Materials Haulage</span></div>
       </div>
 
     </div>
@@ -933,35 +561,16 @@ footer { background: var(--navy2); padding: clamp(48px,6vw,72px) 5vw 0; }
       <h2 class="sec-h">Request a <em>Quote</em></h2>
       <p class="sec-body">Reach us directly for delivery quotes, logistics planning, or any enquiries about our services.</p>
       <div class="c-list">
-        <div class="c-row">
-          <div class="c-lbl">Phone</div>
-          <div class="c-val"><a href="tel:+254750400060">+254 750 400 060</a></div>
-        </div>
-        <div class="c-row">
-          <div class="c-lbl">Phone</div>
-          <div class="c-val"><a href="tel:+254706400060">+254 706 400 060</a></div>
-        </div>
-        <div class="c-row">
-          <div class="c-lbl">WhatsApp</div>
-          <div class="c-val wa"><a href="https://wa.me/254750400060" target="_blank">+254 750 400 060</a></div>
-        </div>
-        <div class="c-row">
-          <div class="c-lbl">Email</div>
-          <div class="c-val"><a href="mailto:harivarsteelcentre@gmail.com">harivarsteelcentre@gmail.com</a></div>
-        </div>
-        <div class="c-row">
-          <div class="c-lbl">Address</div>
-          <div class="c-val">Garissa Road, Thika, Kenya</div>
-        </div>
+        <div class="c-row"><div class="c-lbl">Phone</div><div class="c-val"><a href="tel:+254750400060">+254 750 400 060</a></div></div>
+        <div class="c-row"><div class="c-lbl">Phone</div><div class="c-val"><a href="tel:+254706400060">+254 706 400 060</a></div></div>
+        <div class="c-row"><div class="c-lbl">WhatsApp</div><div class="c-val wa"><a href="https://wa.me/254750400060" target="_blank">+254 750 400 060</a></div></div>
+        <div class="c-row"><div class="c-lbl">Email</div><div class="c-val"><a href="mailto:harivarsteelcentre@gmail.com">harivarsteelcentre@gmail.com</a></div></div>
+        <div class="c-row"><div class="c-lbl">Address</div><div class="c-val">Garissa Road, Thika, Kenya</div></div>
       </div>
     </div>
     <div>
       <div class="map-wrap">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.015!2d37.083!3d-1.033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMDInMDAuMCJTIDM3wrAwNSczMC4wIkU!5e0!3m2!1sen!2ske!4v1234567890"
-          allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.015!2d37.083!3d-1.033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMDInMDAuMCJTIDM3wrAwNSczMC4wIkU!5e0!3m2!1sen!2ske!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="map-foot">Garissa Road, Thika &mdash; Nairobi, Kenya</div>
       </div>
     </div>
@@ -1014,18 +623,15 @@ footer { background: var(--navy2); padding: clamp(48px,6vw,72px) 5vw 0; }
 <div class="gold-rule"></div>
 
 <script>
-// Slideshow
 const slides = document.querySelectorAll('.slide');
 const dotsEl  = document.getElementById('heroDots');
 let cur = 0, timer;
-
 slides.forEach((_,i) => {
   const d = document.createElement('button');
   d.className = 'dot' + (i===0?' active':'');
   d.onclick = () => goTo(i);
   dotsEl.appendChild(d);
 });
-
 function goTo(n){
   slides[cur].classList.remove('active');
   dotsEl.children[cur].classList.remove('active');
@@ -1037,11 +643,8 @@ function goTo(n){
 }
 function next(){ goTo(cur+1); }
 timer = setInterval(next, 5000);
-
-// Nav
 function openNav(){ document.getElementById('mobNav').classList.add('open'); document.body.style.overflow='hidden'; }
 function closeNav(){ document.getElementById('mobNav').classList.remove('open'); document.body.style.overflow=''; }
-
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click', e=>{
     const t = document.querySelector(a.getAttribute('href'));
