@@ -183,14 +183,37 @@ a { text-decoration: none; color: inherit; }
   background-size: cover; background-position: center;
 }
 .slide.active { opacity: 1; }
+  .slide:nth-child(1){
+    background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=90');
+    filter:brightness(1.05) saturate(1.1);
+}
 
-.slide:nth-child(1){ background-image:url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1600&q=90'); filter:brightness(1.05) saturate(1.1);}
-.slide:nth-child(2){ background-image:url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1600&q=90'); filter:brightness(1.08) saturate(1.1);}
-.slide:nth-child(3){ background-image:url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1600&q=90'); filter:brightness(1.05) saturate(1.15);}
-.slide:nth-child(4){ background-image:url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1600&q=90'); filter:brightness(1.1) saturate(1.1);}
-.slide:nth-child(5){ background-image:url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1600&q=90'); filter:brightness(1.1) saturate(1.05);}
-.slide:nth-child(6){ background-image:url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1600&q=90'); filter:brightness(1.08) saturate(1.1);}
+.slide:nth-child(2){
+    background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1600&q=90');
+    filter:brightness(1.08) saturate(1.1);
+}
 
+.slide:nth-child(3){
+    background-image:url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=1600&q=90');
+    filter:brightness(1.05) saturate(1.15);
+}
+
+.slide:nth-child(4){
+    background-image:url('https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1600&q=90');
+    filter:brightness(1.1) saturate(1.1);
+}
+
+.slide:nth-child(5){
+    background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&q=90');
+    filter:brightness(1.1) saturate(1.05);
+}
+
+.slide:nth-child(6){
+    background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&q=90');
+    filter:brightness(1.08) saturate(1.1);
+}
+
+.
 .hero-overlay {
   position: absolute; inset: 0; z-index: 2;
   background: linear-gradient(105deg,
@@ -858,6 +881,46 @@ footer { background: var(--navy2); padding: clamp(48px,6vw,72px) 5vw 0; }
   </div>
 </section>
 <!-- GALLERY -->
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="gallery-inner">
+    <div class="sec-label">Gallery</div>
+    <h2 class="sec-h">Our Fleet &amp; <em>Operations</em></h2>
+    <div class="gal-grid">
+
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=700&q=85" alt="Cement bags loading">
+        <div class="gal-cap"><span>Cement Bags</span></div>
+      </div>
+
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=85" alt="Cement truck transport">
+        <div class="gal-cap"><span>Cement Transport</span></div>
+      </div>
+
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=700&q=85" alt="Bulk cement delivery">
+        <div class="gal-cap"><span>Bulk Cement</span></div>
+      </div>
+
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=700&q=85" alt="Cement tanker truck">
+        <div class="gal-cap"><span>Steel Transport</span></div>
+      </div>
+
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=85" alt="Cement delivery vehicle">
+        <div class="gal-cap"><span>Fleet Operations</span></div>
+      </div>
+
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=700&q=85" alt="Cement construction delivery">
+        <div class="gal-cap"><span>Site Delivery</span></div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- GALLERY -->
 <section class="gallery" id="gallery">
   <div class="gallery-inner">
     <div class="sec-label">Gallery</div>
@@ -897,7 +960,6 @@ footer { background: var(--navy2); padding: clamp(48px,6vw,72px) 5vw 0; }
     </div>
   </div>
 </section>
-<!-- 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
